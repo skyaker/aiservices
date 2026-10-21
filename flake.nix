@@ -14,6 +14,7 @@
           python = pkgs.python3.withPackages (ps: [
             ps.fastapi
             ps.uvicorn
+            ps.aiosqlite
             ps.pytest
             ps.httpx
           ]);

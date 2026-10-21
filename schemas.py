@@ -63,3 +63,62 @@ class ModelInfoResponse(BaseModel):
     model_version: str
     model_type: str
     status: str
+
+
+# ------------------------------------------------------------
+# МОДЕЛИ BATCHING И ПАГИНАЦИИ
+# ------------------------------------------------------------
+
+class BatchRequest(BaseModel):
+    items: list[CandidateRequest] = Field(
+        ..., min_length=1, max_length=8, description="Список откликов для пакетной оценки"
+    )
+
+
+class BatchPredictionResponse(BaseModel):
+    request_id: str
+    batch_size: int
+    processing_time_ms: float
+    items: list[PredictionResponse]
+
+
+class PaginationMeta(BaseModel):
+    weekday: str
+    current_page: int
+    per_page: int
+    total_pages: int
+    total_items: int
+    next_page: str | None
+    prev_page: str | None
+
+
+class PaginatedPredictionsResponse(BaseModel):
+    data: list[PredictionResponse]
+    meta: PaginationMeta
+
+
+# ------------------------------------------------------------
+# МОДЕЛИ ДЛЯ ВНЕШНЕЙ LLM
+# ------------------------------------------------------------
+
+class LLMChatRequest(BaseModel):
+    prompt: str = Field(..., min_length=1, max_length=5000)
+    model: str = Field(default="auto", min_length=1)
+    temperature: float = Field(default=0.3, ge=0, le=2)
+    max_tokens: int = Field(default=300, ge=1, le=2000)
+
+
+class LLMChatResponse(BaseModel):
+    request_id: str
+    requested_model: str
+    returned_model: str | None
+    answer: str
+    reasoning: str | None = None
+    finish_reason: str | None = None
+    usage: dict | None = None
+    latency_ms: float
+
+
+class PredictWithLLMResponse(BaseModel):
+    prediction: PredictionResponse
+    llm: LLMChatResponse
