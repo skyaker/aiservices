@@ -6,4 +6,5 @@ tests/
 *.db
 output/
 report/
+report_lab2/
 tmp/
