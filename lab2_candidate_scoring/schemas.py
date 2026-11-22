@@ -3,9 +3,9 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 
-# ------------------------------------------------------------
-# PYDANTIC-МОДЕЛЬ ВХОДНЫХ ДАННЫХ
-# ------------------------------------------------------------
+
+
+
 
 class CandidateRequest(BaseModel):
     application_id: str = Field(..., min_length=1, max_length=64, description="ID отклика")
@@ -35,9 +35,9 @@ class CandidateRequest(BaseModel):
     )
 
 
-# ------------------------------------------------------------
-# PYDANTIC-МОДЕЛЬ ОТВЕТА /predict
-# ------------------------------------------------------------
+
+
+
 
 class PredictionResponse(BaseModel):
     request_id: str
@@ -50,9 +50,9 @@ class PredictionResponse(BaseModel):
     model_version: str
 
 
-# ------------------------------------------------------------
-# МОДЕЛИ ОТВЕТОВ /health И /model-info
-# ------------------------------------------------------------
+
+
+
 
 class HealthResponse(BaseModel):
     status: str
@@ -65,9 +65,9 @@ class ModelInfoResponse(BaseModel):
     status: str
 
 
-# ------------------------------------------------------------
-# МОДЕЛИ BATCHING И ПАГИНАЦИИ
-# ------------------------------------------------------------
+
+
+
 
 class BatchRequest(BaseModel):
     items: list[CandidateRequest] = Field(
@@ -97,9 +97,9 @@ class PaginatedPredictionsResponse(BaseModel):
     meta: PaginationMeta
 
 
-# ------------------------------------------------------------
-# МОДЕЛИ ДЛЯ ВНЕШНЕЙ LLM
-# ------------------------------------------------------------
+
+
+
 
 class LLMChatRequest(BaseModel):
     prompt: str = Field(..., min_length=1, max_length=5000)

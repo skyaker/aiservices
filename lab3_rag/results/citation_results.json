@@ -1,0 +1,382 @@
+[
+  {
+    "question": "What three stages are used to train InstructGPT?",
+    "found": [
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 1,
+          "page_label": "2",
+          "start_index": 3102,
+          "chunk_id": 8,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 2
+        },
+        "text": "further in Section 5.2. We call the resulting models InstructGPT.\nWe mainly evaluate our models by having our labelers rate the quality of model outputs on our test\nset, consisting of prompts from held-out customers (who are not represented in the training data).\nWe also conduct automatic evaluations on a range of public NLP datasets. We train three model\n3Speciﬁcally, we train on prompts submitted to earlier versions of the InstructGPT models on the OpenAI\nAPI Playground, which were trained only using demonstration data. We ﬁlter out prompts containing PII.\n2"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 6,
+          "page_label": "7",
+          "start_index": 0,
+          "chunk_id": 30,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 7
+        },
+        "text": "To train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 2,
+          "page_label": "3",
+          "start_index": 0,
+          "chunk_id": 9,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 3
+        },
+        "text": "Figure 2: A diagram illustrating the three steps of our method: (1) supervised ﬁne-tuning (SFT), (2)\nreward model (RM) training, and (3) reinforcement learning via proximal policy optimization (PPO)\non this reward model. Blue arrows indicate that this data is used to train one of our models. In Step 2,\nboxes A-D are samples from our models that get ranked by labelers. See Section 3 for more details\non our method.\nsizes (1.3B, 6B, and 175B parameters), and all of our models use the GPT-3 architecture. Our main\nﬁndings are as follows:\nLabelers signiﬁcantly prefer InstructGPT outputs over outputs from GPT-3. On our test set,\noutputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3,\ndespite having over 100x fewer parameters. These models have the same architecture, and differ only\nby the fact that InstructGPT is ﬁne-tuned on our human data. This result holds true even when we"
+      }
+    ],
+    "prompt": "Answer the question in one short sentence using only the context. End the answer by copying the exact [Фрагмент N, стр. M] tag at the beginning of the supporting passage. Figure numbers are not fragment numbers. Never create a tag. If the answer is absent, say Not enough information.\nContext:\nИсточник: LLM_instruct.pdf [Фрагмент 8, стр. 2]\nfurther in Section 5.2. We call the resulting models InstructGPT.\nWe mainly evaluate our models by having our labelers rate the quality of model outputs on our test\nset, consisting of prompts from held-out customers (who are not represented in the training data).\nWe also conduct automatic evaluations on a range of public NLP datasets. We train three model\n3Speciﬁcally, we train on prompts submitted to earlier versions of the InstructGPT models on the OpenAI\nAPI Playground, which were trained only using demonstration data. We ﬁlter out prompts containing PII.\n2\n\nИсточник: LLM_instruct.pdf [Фрагмент 30, стр. 7]\nTo train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with\n\nИсточник: LLM_instruct.pdf [Фрагмент 9, стр. 3]\nFigure 2: A diagram illustrating the three steps of our method: (1) supervised ﬁne-tuning (SFT), (2)\nreward model (RM) training, and (3) reinforcement learning via proximal policy optimization (PPO)\non this reward model. Blue arrows indicate that this data is used to train one of our models. In Step 2,\nboxes A-D are samples from our models that get ranked by labelers. See Section 3 for more details\non our method.\nsizes (1.3B, 6B, and 175B parameters), and all of our models use the GPT-3 architecture. Our main\nﬁndings are as follows:\nLabelers signiﬁcantly prefer InstructGPT outputs over outputs from GPT-3. On our test set,\noutputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3,\ndespite having over 100x fewer parameters. These models have the same architecture, and differ only\nby the fact that InstructGPT is ﬁne-tuned on our human data. This result holds true even when we\nQuestion: What three stages are used to train InstructGPT?\nAnswer:",
+    "answer": "The three stages used to train InstructGPT are: (1) supervised fine-tuning, (2) reward model training, and (3) reinforcement learning via proximal policy optimization. [Фрагмент 9, стр. 3]"
+  },
+  {
+    "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+    "found": [
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 6,
+          "page_label": "7",
+          "start_index": 0,
+          "chunk_id": 30,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 7
+        },
+        "text": "To train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 25,
+          "page_label": "26",
+          "start_index": 0,
+          "chunk_id": 129,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 26
+        },
+        "text": "A Additional prompt data details\nA.1 Labeler-written prompts\nWe ﬁrst give slightly more details on our prompt boostrapping process. As previously mentioned,\nfor the majority of the project, we obtained prompts directly from external users of the instruct beta\nmodels in the OpenAI API. However, this strategy only works once you have a model that accepts\ninstruction-like prompts. In order to train the very ﬁrst such model, we asked contractors to write\nprompts themselves. We asked labelers to write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring diversity\nof tasks.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction. For example, the instruction could be “Give the sentiment for a\ntweet,” and the queries would be tweets and the responses either “Positive” or “Negative.”\nWe can then format these as few-shot prompts like those in Brown et al. (2020). With K"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 10,
+          "page_label": "11",
+          "start_index": 744,
+          "chunk_id": 53,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 11
+        },
+        "text": "Labelers signiﬁcantly prefer InstructGPT outputs over outputs from GPT-3. On our test set\nof prompts, our labelers signiﬁcantly prefer InstructGPT outputs across model sizes. These results\nare shown in Figure 1. We ﬁnd that GPT-3 outputs perform the worst, and one can obtain signiﬁcant\nstep-size improvements by using a well-crafted few-shot prompt (GPT-3 (prompted)), then by training\non demonstrations using supervised learning (SFT), and ﬁnally by training on comparison data using\nPPO. Adding updates on the pretraining mix during PPO does not lead to large changes in labeler\npreference. To illustrate the magnitude of our gains: when compared directly, 175B InstructGPT\noutputs are preferred to GPT-3 outputs 85± 3% of the time, and preferred 71± 4% of the time to\nfew-shot GPT-3.\nWe also found that our results do not change signiﬁcantly when evaluated on prompts submitted to\nGPT-3 models on the API (see Figure 3), though our PPO-ptx models perform slightly worse at larger\nmodel sizes."
+      }
+    ],
+    "prompt": "Answer the question in one short sentence using only the context. End the answer by copying the exact [Фрагмент N, стр. M] tag at the beginning of the supporting passage. Figure numbers are not fragment numbers. Never create a tag. If the answer is absent, say Not enough information.\nContext:\nИсточник: LLM_instruct.pdf [Фрагмент 30, стр. 7]\nTo train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with\n\nИсточник: LLM_instruct.pdf [Фрагмент 129, стр. 26]\nA Additional prompt data details\nA.1 Labeler-written prompts\nWe ﬁrst give slightly more details on our prompt boostrapping process. As previously mentioned,\nfor the majority of the project, we obtained prompts directly from external users of the instruct beta\nmodels in the OpenAI API. However, this strategy only works once you have a model that accepts\ninstruction-like prompts. In order to train the very ﬁrst such model, we asked contractors to write\nprompts themselves. We asked labelers to write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring diversity\nof tasks.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction. For example, the instruction could be “Give the sentiment for a\ntweet,” and the queries would be tweets and the responses either “Positive” or “Negative.”\nWe can then format these as few-shot prompts like those in Brown et al. (2020). With K\n\nИсточник: LLM_instruct.pdf [Фрагмент 53, стр. 11]\nLabelers signiﬁcantly prefer InstructGPT outputs over outputs from GPT-3. On our test set\nof prompts, our labelers signiﬁcantly prefer InstructGPT outputs across model sizes. These results\nare shown in Figure 1. We ﬁnd that GPT-3 outputs perform the worst, and one can obtain signiﬁcant\nstep-size improvements by using a well-crafted few-shot prompt (GPT-3 (prompted)), then by training\non demonstrations using supervised learning (SFT), and ﬁnally by training on comparison data using\nPPO. Adding updates on the pretraining mix during PPO does not lead to large changes in labeler\npreference. To illustrate the magnitude of our gains: when compared directly, 175B InstructGPT\noutputs are preferred to GPT-3 outputs 85± 3% of the time, and preferred 71± 4% of the time to\nfew-shot GPT-3.\nWe also found that our results do not change signiﬁcantly when evaluated on prompts submitted to\nGPT-3 models on the API (see Figure 3), though our PPO-ptx models perform slightly worse at larger\nmodel sizes.\nQuestion: Why were labelers asked to write prompts for the first InstructGPT models?\nAnswer:",
+    "answer": "Because the project needed an initial source of instruction-like prompts to bootstrap the process. [Фрагмент 30, стр. 7]"
+  },
+  {
+    "question": "What does PPO-ptx add to PPO training?",
+    "found": [
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 55,
+          "page_label": "56",
+          "start_index": 3881,
+          "chunk_id": 211,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 56
+        },
+        "text": "We experimented with a few variants of the SFT models as the PPO’s init model, including training\non the human demonstration data for one and two epochs, with 0%, 10%, and 50% pretraining data\nmix. As shown in Figure 37, the only setting stands out is with 10% pretraining data mix. We chose to\ntrain the PPO’s init models on the human demonstration dataset for two epochs, with 10% pretraining\ndata mix, although PPOs’ performance seems not sensitive to these particular choice.\n56"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 8,
+          "page_label": "9",
+          "start_index": 727,
+          "chunk_id": 42,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 9
+        },
+        "text": "Reinforcement learning (RL). Once again following Stiennon et al. (2020), we ﬁne-tuned the\nSFT model on our environment using PPO (Schulman et al., 2017). The environment is a bandit\nenvironment which presents a random customer prompt and expects a response to the prompt. Given\nthe prompt and response, it produces a reward determined by the reward model and ends the episode.\nIn addition, we add a per-token KL penalty from the SFT model at each token to mitigate over-\noptimization of the reward model. The value function is initialized from the RM. We call these\nmodels “PPO.”\nWe also experiment with mixing the pretraining gradients into the PPO gradients, in order to ﬁx the\nperformance regressions on public NLP datasets. We call these models “PPO-ptx.” We maximize the\nfollowing combined objective function in RL training:\nobjective (φ) =E(x,y)∼DπRLφ\n[\nrθ(x,y )−β log\n(\nπRLφ (y|x)/πSFT(y|x))] +\nγEx∼Dpretrain\n[\nlog(πRLφ (x))] (2)"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 14,
+          "page_label": "15",
+          "start_index": 2390,
+          "chunk_id": 71,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 15
+        },
+        "text": "In Figure 29 we show that adding pretraining updates to our PPO ﬁne-tuning (PPO-ptx) mitigates these\nperformance regressions on all datasets, and even surpasses GPT-3 on HellaSwag. The performance\nof the PPO-ptx model still lags behind GPT-3 on DROP, SQuADv2, and translation; more work is\nneeded to study and further eliminate these performance regressions.\nMixing in pretraining updates performs better than the simpler solution of increasing the KL co-\nefﬁcient. In Figure 33, we show that there is a value of the pretraining mix coefﬁcient that both\nreverses the performance regressions on SQuADv2 and DROP (the datasets we used for testing), and\nhas minimal reductions in validation reward. In contrast, increasing the KL coefﬁcient (Figure 34)\nleads to signiﬁcant decreases in validation reward and never fully recovers on DROP and SQuAD.\nChanging the KL model from the PPO init to GPT-3 gives similar results.\n4.3 Qualitative results"
+      }
+    ],
+    "prompt": "Answer the question in one short sentence using only the context. End the answer by copying the exact [Фрагмент N, стр. M] tag at the beginning of the supporting passage. Figure numbers are not fragment numbers. Never create a tag. If the answer is absent, say Not enough information.\nContext:\nИсточник: LLM_instruct.pdf [Фрагмент 211, стр. 56]\nWe experimented with a few variants of the SFT models as the PPO’s init model, including training\non the human demonstration data for one and two epochs, with 0%, 10%, and 50% pretraining data\nmix. As shown in Figure 37, the only setting stands out is with 10% pretraining data mix. We chose to\ntrain the PPO’s init models on the human demonstration dataset for two epochs, with 10% pretraining\ndata mix, although PPOs’ performance seems not sensitive to these particular choice.\n56\n\nИсточник: LLM_instruct.pdf [Фрагмент 42, стр. 9]\nReinforcement learning (RL). Once again following Stiennon et al. (2020), we ﬁne-tuned the\nSFT model on our environment using PPO (Schulman et al., 2017). The environment is a bandit\nenvironment which presents a random customer prompt and expects a response to the prompt. Given\nthe prompt and response, it produces a reward determined by the reward model and ends the episode.\nIn addition, we add a per-token KL penalty from the SFT model at each token to mitigate over-\noptimization of the reward model. The value function is initialized from the RM. We call these\nmodels “PPO.”\nWe also experiment with mixing the pretraining gradients into the PPO gradients, in order to ﬁx the\nperformance regressions on public NLP datasets. We call these models “PPO-ptx.” We maximize the\nfollowing combined objective function in RL training:\nobjective (φ) =E(x,y)∼DπRLφ\n[\nrθ(x,y )−β log\n(\nπRLφ (y|x)/πSFT(y|x))] +\nγEx∼Dpretrain\n[\nlog(πRLφ (x))] (2)\n\nИсточник: LLM_instruct.pdf [Фрагмент 71, стр. 15]\nIn Figure 29 we show that adding pretraining updates to our PPO ﬁne-tuning (PPO-ptx) mitigates these\nperformance regressions on all datasets, and even surpasses GPT-3 on HellaSwag. The performance\nof the PPO-ptx model still lags behind GPT-3 on DROP, SQuADv2, and translation; more work is\nneeded to study and further eliminate these performance regressions.\nMixing in pretraining updates performs better than the simpler solution of increasing the KL co-\nefﬁcient. In Figure 33, we show that there is a value of the pretraining mix coefﬁcient that both\nreverses the performance regressions on SQuADv2 and DROP (the datasets we used for testing), and\nhas minimal reductions in validation reward. In contrast, increasing the KL coefﬁcient (Figure 34)\nleads to signiﬁcant decreases in validation reward and never fully recovers on DROP and SQuAD.\nChanging the KL model from the PPO init to GPT-3 gives similar results.\n4.3 Qualitative results\nQuestion: What does PPO-ptx add to PPO training?\nAnswer:",
+    "answer": "PPO-ptx adds pretraining updates to the PPO fine-tuning process to mitigate performance regressions on public NLP datasets. [Фрагмент 71, стр. 15]"
+  },
+  {
+    "question": "What was the largest use-case category in the API prompt dataset?",
+    "found": [
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 5,
+          "page_label": "6",
+          "start_index": 0,
+          "chunk_id": 25,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 6
+        },
+        "text": "Table 1: Distribution of use\ncase categories from our API\nprompt dataset.\nUse-case (%)\nGeneration 45.6%\nOpen QA 12.4%\nBrainstorming 11.2%\nChat 8.4%\nRewrite 6.6%\nSummarization 4.2%\nClassiﬁcation 3.5%\nOther 3.5%\nClosed QA 2.6%\nExtract 1.9%\nTable 2: Illustrative prompts from our API prompt dataset. These\nare ﬁctional examples inspired by real usage—see more examples\nin Appendix A.2.1.\nUse-case Prompt\nBrainstorming List ﬁve ideas for how to regain enthusiasm for my\ncareer\nGeneration Write a short story where a bear goes to the beach,\nmakes friends with a seal, and then returns home.\nRewrite This is the summary of a Broadway play:\n\"\"\"\n{summary}\n\"\"\"\nThis is the outline of the commercial for that play:\n\"\"\"\n3 Methods and experimental details\n3.1 High-level methodology\nOur methodology follows that of Ziegler et al. (2019) and Stiennon et al. (2020), who applied\nit in the stylistic continuation and summarization domains. We start with a pretrained language"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 6,
+          "page_label": "7",
+          "start_index": 1473,
+          "chunk_id": 32,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 7
+        },
+        "text": "categories for our API prompts (speciﬁcally the RM dataset) as labeled by our contractors. Most of\nthe use-cases have are generative, rather than classiﬁcation or QA. We also show some illustrative\nprompts (written by researchers to mimic the kinds of prompts submitted to InstructGPT models) in\nTable 2; more prompts submitted to InstructGPT models are shown in Appendix A.2.1, and prompts\nsubmitted to GPT-3 models are shown in Appendix A.2.2. We provide more details about our dataset\nin Appendix A.\n3.3 Tasks\nOur training tasks are from two sources: (1) a dataset of prompts written by our labelers and (2) a\ndataset of prompts submitted to early InstructGPT models on our API (see Table 6). These prompts\nare very diverse and include generation, question answering, dialog, summarization, extractions, and\nother natural language tasks (see Table 1). Our dataset is over 96% English, however in Section 4.3"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 25,
+          "page_label": "26",
+          "start_index": 2368,
+          "chunk_id": 132,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 26
+        },
+        "text": "To ensure a diversity of use cases, we heuristically deduplicate prompts by checking for prompts that\nshare a long common preﬁx, and limited the number of prompts to roughly 200 per organization.\nIn addition, we create train, validation, and test splits based on organization IDs, so that e.g. the\nvalidation set contains different use cases than the training set.\nWe conceptualized API requests as belonging to one of ten use cases: generation, open QA, closed\nQA, brainstorming, chat, rewriting, summarization, classiﬁcation, extraction, or other. Below, we\nshow ﬁctional but realistic prompts from a variety of use cases:\nA.2.1 Illustrative user prompts from InstructGPT distribution\nUse Case Example\nbrainstorming List ﬁve ideas for how to regain enthusiasm for my career\nbrainstorming What are some key points I should know when studying Ancient Greece?\nbrainstorming What are 4 questions a user might have after reading the instruction manual for a\ntrash compactor?\n{user manual}\n1."
+      }
+    ],
+    "prompt": "Answer the question in one short sentence using only the context. End the answer by copying the exact [Фрагмент N, стр. M] tag at the beginning of the supporting passage. Figure numbers are not fragment numbers. Never create a tag. If the answer is absent, say Not enough information.\nContext:\nИсточник: LLM_instruct.pdf [Фрагмент 25, стр. 6]\nTable 1: Distribution of use\ncase categories from our API\nprompt dataset.\nUse-case (%)\nGeneration 45.6%\nOpen QA 12.4%\nBrainstorming 11.2%\nChat 8.4%\nRewrite 6.6%\nSummarization 4.2%\nClassiﬁcation 3.5%\nOther 3.5%\nClosed QA 2.6%\nExtract 1.9%\nTable 2: Illustrative prompts from our API prompt dataset. These\nare ﬁctional examples inspired by real usage—see more examples\nin Appendix A.2.1.\nUse-case Prompt\nBrainstorming List ﬁve ideas for how to regain enthusiasm for my\ncareer\nGeneration Write a short story where a bear goes to the beach,\nmakes friends with a seal, and then returns home.\nRewrite This is the summary of a Broadway play:\n\"\"\"\n{summary}\n\"\"\"\nThis is the outline of the commercial for that play:\n\"\"\"\n3 Methods and experimental details\n3.1 High-level methodology\nOur methodology follows that of Ziegler et al. (2019) and Stiennon et al. (2020), who applied\nit in the stylistic continuation and summarization domains. We start with a pretrained language\n\nИсточник: LLM_instruct.pdf [Фрагмент 32, стр. 7]\ncategories for our API prompts (speciﬁcally the RM dataset) as labeled by our contractors. Most of\nthe use-cases have are generative, rather than classiﬁcation or QA. We also show some illustrative\nprompts (written by researchers to mimic the kinds of prompts submitted to InstructGPT models) in\nTable 2; more prompts submitted to InstructGPT models are shown in Appendix A.2.1, and prompts\nsubmitted to GPT-3 models are shown in Appendix A.2.2. We provide more details about our dataset\nin Appendix A.\n3.3 Tasks\nOur training tasks are from two sources: (1) a dataset of prompts written by our labelers and (2) a\ndataset of prompts submitted to early InstructGPT models on our API (see Table 6). These prompts\nare very diverse and include generation, question answering, dialog, summarization, extractions, and\nother natural language tasks (see Table 1). Our dataset is over 96% English, however in Section 4.3\n\nИсточник: LLM_instruct.pdf [Фрагмент 132, стр. 26]\nTo ensure a diversity of use cases, we heuristically deduplicate prompts by checking for prompts that\nshare a long common preﬁx, and limited the number of prompts to roughly 200 per organization.\nIn addition, we create train, validation, and test splits based on organization IDs, so that e.g. the\nvalidation set contains different use cases than the training set.\nWe conceptualized API requests as belonging to one of ten use cases: generation, open QA, closed\nQA, brainstorming, chat, rewriting, summarization, classiﬁcation, extraction, or other. Below, we\nshow ﬁctional but realistic prompts from a variety of use cases:\nA.2.1 Illustrative user prompts from InstructGPT distribution\nUse Case Example\nbrainstorming List ﬁve ideas for how to regain enthusiasm for my career\nbrainstorming What are some key points I should know when studying Ancient Greece?\nbrainstorming What are 4 questions a user might have after reading the instruction manual for a\ntrash compactor?\n{user manual}\n1.\nQuestion: What was the largest use-case category in the API prompt dataset?\nAnswer:",
+    "answer": "The largest use-case category in the API prompt dataset was generation, with 45.6% of the use-cases. [Фрагмент 25, стр. 6]"
+  },
+  {
+    "question": "Why can the learned alignment reflect a limited group of values?",
+    "found": [
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 17,
+          "page_label": "18",
+          "start_index": 0,
+          "chunk_id": 85,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 18
+        },
+        "text": "the real world with customers.10 This enables an important feedback loop on the techniques’\neffectiveness and limitations.\n5.2 Who are we aligning to?\nWhen aligning language models with human intentions, their end behavior is a function of the\nunderlying model (and its training data), the ﬁne-tuning data, and the alignment method used. In this\nsection, we describe a number of factors that inﬂuence the ﬁne-tuning data speciﬁcally, to ultimately\ndetermine what and who we’re aligning to. We then consider areas for improvement before a larger\ndiscussion of the limitations of our work in Section 5.3.\nThe literature often frames alignment using such terms as “human preferences” or “human values.”\nIn this work, we have aligned to a set of labelers’ preferences that were inﬂuenced, among others\nthings, by the instructions they were given, the context in which they received them (as a paid job),\nand who they received them from. Some crucial caveats apply:"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 19,
+          "page_label": "20",
+          "start_index": 1643,
+          "chunk_id": 99,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 20
+        },
+        "text": "values in a way that achieves broad consensus amongst many groups. We discuss some related\nconsiderations in Section 5.2.\n5.5 Broader impacts\nThis work is motivated by our aim to increase the positive impact of large language models by training\nthem to do what a given set of humans want them to do. By default, language models optimize\nthe next word prediction objective, which is only a proxy for what we want these models to do.\nOur results indicate that our techniques hold promise for making language models more helpful,\ntruthful, and harmless. In the longer term, alignment failures could lead to more severe consequences,\nparticularly if these models are deployed in safety-critical situations. We expect that as model scaling\ncontinues, greater care has to be taken to ensure that they are aligned with human intentions (Bostrom,\n2014).\nHowever, making language models better at following user intentions also makes them easier to"
+      },
+      {
+        "metadata": {
+          "producer": "pdfTeX-1.40.21",
+          "creator": "LaTeX with hyperref",
+          "creationdate": "2022-03-07T01:37:12+00:00",
+          "author": "",
+          "keywords": "",
+          "moddate": "2022-03-07T01:37:12+00:00",
+          "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+          "subject": "",
+          "title": "",
+          "trapped": "/False",
+          "source": "/Users/jungdongwook/code/lab3_rag/lab3_additional_run/data/LLM_instruct.pdf",
+          "total_pages": 68,
+          "page": 17,
+          "page_label": "18",
+          "start_index": 3082,
+          "chunk_id": 89,
+          "source_name": "LLM_instruct.pdf",
+          "page_number": 18
+        },
+        "text": "and has suitable accountability mechanisms in place. The goal of this paper is to demonstrate that\nthis alignment technique can align to an speciﬁc human reference group for a speciﬁc application.\nWe are not claiming that researchers, the labelers we hired, or our API customers are the right source\nof preferences. There are many stakeholders to consider—the organization training the model, the\ncustomers using the model to develop products, the end users of these products, and the broader\npopulation who may be directly or indirectly affected. It is not only a matter of making the alignment\nprocess more participatory; it is impossible that one can train a system that is aligned to everyone’s\npreferences at once, or where everyone would endorse the tradeoffs.\nOne path forward could be to train models that can be conditioned on the preferences of certain\ngroups, or that can be easily ﬁne-tuned or prompted to represent different groups. Different models"
+      }
+    ],
+    "prompt": "Answer the question in one short sentence using only the context. End the answer by copying the exact [Фрагмент N, стр. M] tag at the beginning of the supporting passage. Figure numbers are not fragment numbers. Never create a tag. If the answer is absent, say Not enough information.\nContext:\nИсточник: LLM_instruct.pdf [Фрагмент 85, стр. 18]\nthe real world with customers.10 This enables an important feedback loop on the techniques’\neffectiveness and limitations.\n5.2 Who are we aligning to?\nWhen aligning language models with human intentions, their end behavior is a function of the\nunderlying model (and its training data), the ﬁne-tuning data, and the alignment method used. In this\nsection, we describe a number of factors that inﬂuence the ﬁne-tuning data speciﬁcally, to ultimately\ndetermine what and who we’re aligning to. We then consider areas for improvement before a larger\ndiscussion of the limitations of our work in Section 5.3.\nThe literature often frames alignment using such terms as “human preferences” or “human values.”\nIn this work, we have aligned to a set of labelers’ preferences that were inﬂuenced, among others\nthings, by the instructions they were given, the context in which they received them (as a paid job),\nand who they received them from. Some crucial caveats apply:\n\nИсточник: LLM_instruct.pdf [Фрагмент 99, стр. 20]\nvalues in a way that achieves broad consensus amongst many groups. We discuss some related\nconsiderations in Section 5.2.\n5.5 Broader impacts\nThis work is motivated by our aim to increase the positive impact of large language models by training\nthem to do what a given set of humans want them to do. By default, language models optimize\nthe next word prediction objective, which is only a proxy for what we want these models to do.\nOur results indicate that our techniques hold promise for making language models more helpful,\ntruthful, and harmless. In the longer term, alignment failures could lead to more severe consequences,\nparticularly if these models are deployed in safety-critical situations. We expect that as model scaling\ncontinues, greater care has to be taken to ensure that they are aligned with human intentions (Bostrom,\n2014).\nHowever, making language models better at following user intentions also makes them easier to\n\nИсточник: LLM_instruct.pdf [Фрагмент 89, стр. 18]\nand has suitable accountability mechanisms in place. The goal of this paper is to demonstrate that\nthis alignment technique can align to an speciﬁc human reference group for a speciﬁc application.\nWe are not claiming that researchers, the labelers we hired, or our API customers are the right source\nof preferences. There are many stakeholders to consider—the organization training the model, the\ncustomers using the model to develop products, the end users of these products, and the broader\npopulation who may be directly or indirectly affected. It is not only a matter of making the alignment\nprocess more participatory; it is impossible that one can train a system that is aligned to everyone’s\npreferences at once, or where everyone would endorse the tradeoffs.\nOne path forward could be to train models that can be conditioned on the preferences of certain\ngroups, or that can be easily ﬁne-tuned or prompted to represent different groups. Different models\nQuestion: Why can the learned alignment reflect a limited group of values?\nAnswer:",
+    "answer": "The learned alignment can reflect a limited group of values because it is based on the preferences of a specific human reference group for a specific application, rather than a broad consensus amongst many groups. [Фрагмент 89, стр. 18]"
+  }
+]

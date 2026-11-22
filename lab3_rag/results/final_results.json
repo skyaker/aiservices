@@ -1,0 +1,1460 @@
+{
+  "prompts": [
+    {
+      "question": "What three stages are used to train InstructGPT?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 1,
+            "page_label": "2",
+            "start_index": 3102,
+            "chunk_id": 8,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 2
+          },
+          "text": "further in Section 5.2. We call the resulting models InstructGPT.\nWe mainly evaluate our models by having our labelers rate the quality of model outputs on our test\nset, consisting of prompts from held-out customers (who are not represented in the training data).\nWe also conduct automatic evaluations on a range of public NLP datasets. We train three model\n3Speciﬁcally, we train on prompts submitted to earlier versions of the InstructGPT models on the OpenAI\nAPI Playground, which were trained only using demonstration data. We ﬁlter out prompts containing PII.\n2"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 6,
+            "page_label": "7",
+            "start_index": 0,
+            "chunk_id": 30,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 7
+          },
+          "text": "To train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 2,
+            "page_label": "3",
+            "start_index": 0,
+            "chunk_id": 9,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 3
+          },
+          "text": "Figure 2: A diagram illustrating the three steps of our method: (1) supervised ﬁne-tuning (SFT), (2)\nreward model (RM) training, and (3) reinforcement learning via proximal policy optimization (PPO)\non this reward model. Blue arrows indicate that this data is used to train one of our models. In Step 2,\nboxes A-D are samples from our models that get ranked by labelers. See Section 3 for more details\non our method.\nsizes (1.3B, 6B, and 175B parameters), and all of our models use the GPT-3 architecture. Our main\nﬁndings are as follows:\nLabelers signiﬁcantly prefer InstructGPT outputs over outputs from GPT-3. On our test set,\noutputs from the 1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3,\ndespite having over 100x fewer parameters. These models have the same architecture, and differ only\nby the fact that InstructGPT is ﬁne-tuned on our human data. This result holds true even when we"
+        }
+      ],
+      "original": "Три stages, которые используются для обучения InstructGPT, — это:\n\n1. Supervised fine-tuning (SFT)\n2. Reward model (RM) training\n3. Reinforcement learning via proximal policy optimization (PPO)",
+      "strict": "2. [Фрагмент 30, стр. 7]"
+    },
+    {
+      "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 6,
+            "page_label": "7",
+            "start_index": 0,
+            "chunk_id": 30,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 7
+          },
+          "text": "To train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 25,
+            "page_label": "26",
+            "start_index": 0,
+            "chunk_id": 129,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 26
+          },
+          "text": "A Additional prompt data details\nA.1 Labeler-written prompts\nWe ﬁrst give slightly more details on our prompt boostrapping process. As previously mentioned,\nfor the majority of the project, we obtained prompts directly from external users of the instruct beta\nmodels in the OpenAI API. However, this strategy only works once you have a model that accepts\ninstruction-like prompts. In order to train the very ﬁrst such model, we asked contractors to write\nprompts themselves. We asked labelers to write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring diversity\nof tasks.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction. For example, the instruction could be “Give the sentiment for a\ntweet,” and the queries would be tweets and the responses either “Positive” or “Negative.”\nWe can then format these as few-shot prompts like those in Brown et al. (2020). With K"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 10,
+            "page_label": "11",
+            "start_index": 744,
+            "chunk_id": 53,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 11
+          },
+          "text": "Labelers signiﬁcantly prefer InstructGPT outputs over outputs from GPT-3. On our test set\nof prompts, our labelers signiﬁcantly prefer InstructGPT outputs across model sizes. These results\nare shown in Figure 1. We ﬁnd that GPT-3 outputs perform the worst, and one can obtain signiﬁcant\nstep-size improvements by using a well-crafted few-shot prompt (GPT-3 (prompted)), then by training\non demonstrations using supervised learning (SFT), and ﬁnally by training on comparison data using\nPPO. Adding updates on the pretraining mix during PPO does not lead to large changes in labeler\npreference. To illustrate the magnitude of our gains: when compared directly, 175B InstructGPT\noutputs are preferred to GPT-3 outputs 85± 3% of the time, and preferred 71± 4% of the time to\nfew-shot GPT-3.\nWe also found that our results do not change signiﬁcantly when evaluated on prompts submitted to\nGPT-3 models on the API (see Figure 3), though our PPO-ptx models perform slightly worse at larger\nmodel sizes."
+        }
+      ],
+      "original": "Предположить, что labelers были заданы prompts, чтобы bootstrap процесс обучения первых InstructGPT моделей.",
+      "strict": "Not enough information in the document."
+    },
+    {
+      "question": "What does PPO-ptx add to PPO training?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 55,
+            "page_label": "56",
+            "start_index": 3881,
+            "chunk_id": 211,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 56
+          },
+          "text": "We experimented with a few variants of the SFT models as the PPO’s init model, including training\non the human demonstration data for one and two epochs, with 0%, 10%, and 50% pretraining data\nmix. As shown in Figure 37, the only setting stands out is with 10% pretraining data mix. We chose to\ntrain the PPO’s init models on the human demonstration dataset for two epochs, with 10% pretraining\ndata mix, although PPOs’ performance seems not sensitive to these particular choice.\n56"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 8,
+            "page_label": "9",
+            "start_index": 727,
+            "chunk_id": 42,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 9
+          },
+          "text": "Reinforcement learning (RL). Once again following Stiennon et al. (2020), we ﬁne-tuned the\nSFT model on our environment using PPO (Schulman et al., 2017). The environment is a bandit\nenvironment which presents a random customer prompt and expects a response to the prompt. Given\nthe prompt and response, it produces a reward determined by the reward model and ends the episode.\nIn addition, we add a per-token KL penalty from the SFT model at each token to mitigate over-\noptimization of the reward model. The value function is initialized from the RM. We call these\nmodels “PPO.”\nWe also experiment with mixing the pretraining gradients into the PPO gradients, in order to ﬁx the\nperformance regressions on public NLP datasets. We call these models “PPO-ptx.” We maximize the\nfollowing combined objective function in RL training:\nobjective (φ) =E(x,y)∼DπRLφ\n[\nrθ(x,y )−β log\n(\nπRLφ (y|x)/πSFT(y|x))] +\nγEx∼Dpretrain\n[\nlog(πRLφ (x))] (2)"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 14,
+            "page_label": "15",
+            "start_index": 2390,
+            "chunk_id": 71,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 15
+          },
+          "text": "In Figure 29 we show that adding pretraining updates to our PPO ﬁne-tuning (PPO-ptx) mitigates these\nperformance regressions on all datasets, and even surpasses GPT-3 on HellaSwag. The performance\nof the PPO-ptx model still lags behind GPT-3 on DROP, SQuADv2, and translation; more work is\nneeded to study and further eliminate these performance regressions.\nMixing in pretraining updates performs better than the simpler solution of increasing the KL co-\nefﬁcient. In Figure 33, we show that there is a value of the pretraining mix coefﬁcient that both\nreverses the performance regressions on SQuADv2 and DROP (the datasets we used for testing), and\nhas minimal reductions in validation reward. In contrast, increasing the KL coefﬁcient (Figure 34)\nleads to signiﬁcant decreases in validation reward and never fully recovers on DROP and SQuAD.\nChanging the KL model from the PPO init to GPT-3 gives similar results.\n4.3 Qualitative results"
+        }
+      ],
+      "original": "ПPO-птекс (PPO-ptx) добавляет в себя в себя внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внешнюю внеш",
+      "strict": "Not enough information in the document."
+    },
+    {
+      "question": "Which model size was preferred to 175B GPT-3 in human evaluations?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 57,
+            "page_label": "58",
+            "start_index": 2475,
+            "chunk_id": 216,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 58
+          },
+          "text": "and using larger models may change this conclusion.\nWe experimented with batch sizes of 64, 128, 256, 512, and 1024, for PPO with pretraining data mix,\non the 1.3B model. A batch size of 512 was found to be the best through human evaluations. After\nﬁxing the batch size at 512, we further experimented with minibatch sizes of 8, 16, 32, 64. We found\n58"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 10,
+            "page_label": "11",
+            "start_index": 0,
+            "chunk_id": 52,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 11
+          },
+          "text": "0.25\n0.50\n0.75Win rate against SFT 175B\nGPT distribution\nGPT GPT(prompted) SFT PPO PPO-ptx\nInstruct distribution\nHeldout workers\n1.3B 6B 175B\n0.25\n0.50\n0.75\n1.3B 6B 175B\nModel size\nTraining workers\nFigure 3: Preference results of our models, measured by winrate against the 175B SFT model. Left:\nresults on prompts submitted to GPT models on the API; Right: results on prompts submitted to\nInstructGPT models on the API; Top: results from held-out labelers; Bottom: results from training\nlabelers. We omit GPT (prompted) from the evals on prompts submitted to GPT-3 models (left) as\nthese prompts are already designed to perform well for GPT-3, as opposed to prompts submitted to\nInstructGPT models (right).\n4.1 Results on the API distribution\nLabelers signiﬁcantly prefer InstructGPT outputs over outputs from GPT-3. On our test set\nof prompts, our labelers signiﬁcantly prefer InstructGPT outputs across model sizes. These results"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 9,
+            "page_label": "10",
+            "start_index": 3187,
+            "chunk_id": 50,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 10
+          },
+          "text": "disadvantage the GPT-3 baselines. Thus, we also evaluate on prompts submitted to GPT-3 models\non the API; these prompts are generally not in an ‘instruction following’ style, but are designed\nspeciﬁcally for GPT-3. In both cases, for each model we calculate how often its outputs are preferred\nto a baseline policy; we choose our 175B SFT model as the baseline since its performance is near the\nmiddle of the pack. Additionally, we ask labelers to judge the overall quality of each response on a\n1-7 Likert scale and collect a range of metadata for each model output (see Table 3).\nEvaluations on public NLP datasets. We evaluate on two types of public datasets: those that\ncapture an aspect of language model safety, particularly truthfulness, toxicity, and bias, and those that\ncapture zero-shot performance on traditional NLP tasks like question answering, reading comprehen-\nsion, and summarization. We also conduct human evaluations of toxicity on the RealToxicityPrompts"
+        }
+      ],
+      "original": "По фрагменту 50, стр. 10, в human evaluations было выбран 1,3Б GPT.",
+      "strict": "Not enough information in the document."
+    },
+    {
+      "question": "What were the three desired properties of model behavior?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 39,
+            "page_label": "40",
+            "start_index": 0,
+            "chunk_id": 169,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 40
+          },
+          "text": "Table 12: Labeler demographic data\nWhat gender do you identify as?\nMale 50.0%\nFemale 44.4%\nNonbinary / other 5.6%\nWhat ethnicities do you identify as?\nWhite / Caucasian 31.6%\nSoutheast Asian 52.6%\nIndigenous / Native American / Alaskan Native 0.0%\nEast Asian 5.3%\nMiddle Eastern 0.0%\nLatinx 15.8%\nBlack / of African descent 10.5%\nWhat is your nationality?\nFilipino 22%\nBangladeshi 22%\nAmerican 17%\nAlbanian 5%\nBrazilian 5%\nCanadian 5%\nColombian 5%\nIndian 5%\nUruguayan 5%\nZimbabwean 5%\nWhat is your age?\n18-24 26.3%\n25-34 47.4%\n35-44 10.5%\n45-54 10.5%\n55-64 5.3%\n65+ 0%\nWhat is your highest attained level of education?\nLess than high school degree 0%\nHigh school degree 10.5%\nUndergraduate degree 52.6%\nMaster’s degree 36.8%\nDoctorate degree 0%\nC Additional model details\nAll model architectures use the GPT-3 architecture (Brown et al., 2020). For the reward models and\nvalue functions, the unembedding layer of the original model is replaced with a projection layer"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 19,
+            "page_label": "20",
+            "start_index": 4075,
+            "chunk_id": 102,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 20
+          },
+          "text": "and increased centralization of power because it requires the API provider to make decisions on\nwhere to draw the line on each of these questions.\nFinally, as discussed in Section 5.2, the question of who these models are aligned to is extremely\nimportant, and will signiﬁcantly affect whether the net impact of these models is positive or negative.\n20"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 36,
+            "page_label": "37",
+            "start_index": 821,
+            "chunk_id": 158,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 37
+          },
+          "text": "to ensure that they are helpful, truthful, and harmless. For most tasks, being truthful and harmless is more important than\nbeing helpful.\nBy helpful, we mean that the output should follow the user’s intention, and help the user solve their task. Some examples of\nhelpful behavior:\n• Writing in clear language.\n• Answering the question they meant to ask, even if they mis-asked it.\n• Being sensitive to internationality (e.g. “football” shouldn’t mean American football, and “the president” doesn’t\nnecessarily mean the US president).\n• If an instruction is too confusing, asking for clariﬁcation and explaining why the instruction is confusing.\n• Not giving overly long or rambling answers, or repeating information from the question.\n• Not assuming extraneous extra context outside of what’s given (besides things like facts about the world), unless\nthat’s an implied part of the task. For example, if asked to “write a polite email response to this email: email"
+        }
+      ],
+      "original": "По фрагменту 158, стр. 37,Three desired properties of model behavior were:\n\n1. Being truthful\n2. Being harmless\n3. Helping the user solve their task.",
+      "strict": "Not enough information in the document."
+    },
+    {
+      "question": "What was the exact annual salary of every labeler?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 37,
+            "page_label": "38",
+            "start_index": 3085,
+            "chunk_id": 167,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 38
+          },
+          "text": "In combination with our demographics survey, we also sent out a survey to obtain feedback on the\ntask. We show the results from the 19 respondents in Table 13. Overall, our labelers enjoyed the\ntask, thought they were paid fairly for their work, and shared that they appreciated the helpfulness\nand level of communication from the researchers. Some labelers did ﬁnd the task repetitive, though\nothers felt there was enough variation to keep things interesting and engaging.\nB.5 Web interface\nIn Figure 12, we show screenshots of our labeling interface, that all of our labelers (and researchers)\nuse to label data.\n38"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 40,
+            "page_label": "41",
+            "start_index": 0,
+            "chunk_id": 172,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 41
+          },
+          "text": "Table 13: Labeler satisfaction survey\nIt was clear from the instructions what I was supposed to do.\nStrongly agree 57.9%\nAgree 42.1%\nNeither agree nor disagree 0%\nDisagree 0%\nStrongly disagree 0%\nI found the task enjoyable and engaging.\nStrongly agree 57.9%\nAgree 36.8%\nNeither agree nor disagree 5.3%\nDisagree 0%\nStrongly disagree 0%\nI found the task repetitive.\nStrongly agree 0%\nAgree 31.6%\nNeither agree nor disagree 31.6%\nDisagree 36.8%\nStrongly disagree 0%\nI was paid fairly for doing the task.\nStrongly agree 47.4%\nAgree 42.1%\nNeither agree nor disagree 10.5%\nDisagree 0%\nStrongly disagree 0%\nOverall, I’m glad I did this task.\nStrongly agree 78.9%\nAgree 21.1%\nNeither agree nor disagree 0%\nDisagree 0%\nStrongly disagree 0%\nwere selected based on the RM score, which we’ve found to be more predictive of human preference\nresults compared to validation loss.\nC.2 Details of RM training\nWe trained a single 6B reward model which we used for all PPO models of all sizes. Larger 175B"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 35,
+            "page_label": "36",
+            "start_index": 1548,
+            "chunk_id": 154,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 36
+          },
+          "text": "labeler.\n4. Self-assessed ability to identify sensitive speech for different groups. We wanted to\nselect a team of labelers that had collectively were able to identify sensitive content in a\nbroad range of areas. For legal reasons, we can’t hire contractors based on demographic\ncriteria. Thus, we had labelers answer the question: “For what topics or cultural groups\nare you comfortable identifying sensitive speech?” and used this as part of our selection\nprocess.\nAfter collecting this data, we selected the labelers who did well on all of these criteria (we performed\nselections on an anonymized version of the data). Since the fourth criteria is subjective, we ultimately\nchose labelers subjectively according to these criteria, though we had soft cutoffs at 75% agreement\non sensitive speech ﬂagging and comparisons, and a 6/7 demonstration score.\nB.2 Labeling instructions\nThe instructions we provided to labelers evolved over the course of the project, as we provided"
+        }
+      ],
+      "original": "Нет информации о том, что labelers получали в качестве оплаты.",
+      "strict": "Not enough information in the document."
+    },
+    {
+      "question": "Which GPU serial numbers were used for the 175B model?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 67,
+            "page_label": "68",
+            "start_index": 2491,
+            "chunk_id": 246,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 68
+          },
+          "text": "lumps.\nFigure 50: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n68"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 61,
+            "page_label": "62",
+            "start_index": 1582,
+            "chunk_id": 222,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 62
+          },
+          "text": "Figure 42: Model samples on a prompt cherry-picked to show instruction following behavior in other\nlanguages, along with random samples from the GPT-3 175B and InstructGPT 175B models. This is\nthe same French example as the top of Figure 8, but contains the full InstructGPT sample.\n62"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 65,
+            "page_label": "66",
+            "start_index": 3185,
+            "chunk_id": 240,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 66
+          },
+          "text": "decisions into doubt.\nFigure 48: Labeler-written prompt from our dataset, along with the human-written demonstration,\nand completions from GPT-3 175B and InstructGPT175B. Prompt is lightly cherry-picked (5 selected\nfrom 15 to show a diverse range of tasks), and the completions are not cherry-picked.\n66"
+        }
+      ],
+      "original": "Нет указанных GPU serial numbers в предоставленном тексте.",
+      "strict": "Not enough information in the document."
+    },
+    {
+      "question": "What was the weather in San Francisco on the first day of training?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 55,
+            "page_label": "56",
+            "start_index": 3881,
+            "chunk_id": 211,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 56
+          },
+          "text": "We experimented with a few variants of the SFT models as the PPO’s init model, including training\non the human demonstration data for one and two epochs, with 0%, 10%, and 50% pretraining data\nmix. As shown in Figure 37, the only setting stands out is with 10% pretraining data mix. We chose to\ntrain the PPO’s init models on the human demonstration dataset for two epochs, with 10% pretraining\ndata mix, although PPOs’ performance seems not sensitive to these particular choice.\n56"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 31,
+            "page_label": "32",
+            "start_index": 0,
+            "chunk_id": 143,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 32
+          },
+          "text": "Use Case Example\nchat This is a conversation with Steven. Steven likes to watch Netﬂix and hasn’t left\nhis home in 2 weeks.\nJohn: Hey man what’s up?\nSteven: Exactly the same thing as yesterday. you know.\nJohn: So we’re going to go see a movie on Thursday, want to come?\nSteven: Ummmm don’t think so....\nclosed qa When you drop a heavy stone from a tree, what happens?\nA. The stone falls to the ground.\nB: The stone stays in the tree.\nC: The stone ﬂoats.\nD: Nothing happens.\nAnswer:\nclosed qa Text:\n{article describing what yoga mats to buy}\nQuestion: What are the things I should consider when buying a yoga\nmat?\nAnswer:\nopen qa Q: Who is Batman?\nA: Batman is a ﬁctional comic book character.\nQ: What is torsalplexity?\nA: ?\nQ: What is Devz9?\nA: ?\nQ: Who is George Lucas?\nA: George Lucas is American ﬁlm director and producer famous for creating\nStar Wars.\nQ: What is the capital of California?\nA:\nopen qa Who was the best human who ever lived?\nopen qa Q: Who is Leonardo da Vinci?\nA:"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 55,
+            "page_label": "56",
+            "start_index": 1561,
+            "chunk_id": 208,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 56
+          },
+          "text": "few-shot 0.550 0.677 0.791 0.516 0.657 0.741 0.530 0.671 0.759 0.559 0.694 0.820\nWSC accuracy zero-shot 0.567 0.635 0.740 0.615 0.606 0.654 0.663 0.654 0.683 0.692 0.587 0.731\nfew-shot 0.587 0.654 0.798 0.615 0.625 0.779 0.625 0.596 0.654 0.644 0.673 0.788\nRTE accuracy zero-shot 0.527 0.617 0.563 0.487 0.516 0.570 0.480 0.708 0.704 0.538 0.657 0.668\nfew-shot 0.585 0.682 0.614 0.574 0.657 0.700 0.606 0.585 0.711 0.545 0.697 0.765\nSST accuracy zero-shot 0.592 0.616 0.898 0.873 0.888 0.907 0.817 0.820 0.920 0.812 0.901 0.900\nfew-shot 0.842 0.930 0.944 0.909 0.933 0.936 0.794 0.880 0.944 0.838 0.923 0.938\nQuAC f1 zero-shot 32.13 38.19 42.55 34.52 41.19 45.22 29.02 37.64 34.52 35.04 37.35 41.60\nfew-shot 36.02 41.78 45.38 35.95 43.13 48.77 31.81 40.63 36.00 39.40 42.42 46.99\nSQuADv2 f1 zero-shot 51.97 58.66 64.30 36.88 46.53 57.67 45.37 47.42 43.68 45.46 47.23 59.85\nfew-shot 58.86 62.33 69.75 46.62 53.91 65.90 48.11 52.34 51.95 58.33 63.78 69.93"
+        }
+      ],
+      "original": "Источник: LLM_instruct.pdf | [Фрагмент 211, стр. 56]\nWe experimented with a few variants of the SFT models as the PPO’s init model, including training\non the human demonstration data for one and two epochs, with 0%, 10%, and 50% pretraining data\nmix. As shown in Figure 37, the only setting stands out is with 10% pretraining data mix. We chose to\ntrain the PPO’s init models on the human demonstration dataset for two epochs, with 10% pretraining\ndata mix, although PPOs’ performance seems not sensitive to these particular choice.",
+      "strict": "Not enough information in the document."
+    },
+    {
+      "question": "What was the exact electricity bill in US dollars for training InstructGPT?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 16,
+            "page_label": "17",
+            "start_index": 2457,
+            "chunk_id": 82,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 17
+          },
+          "text": "is a fraction of what was spent to train GPT-3: training our 175B SFT model requires\n4.9 petaﬂops/s-days and training our 175B PPO-ptx model requires 60 petaﬂops/s-days,\ncompared to 3,640 petaﬂops/s-days for GPT-3 (Brown et al., 2020). At the same time,\nour results show that RLHF is very effective at making language models more helpful to\nusers, more so than a 100x model size increase. This suggests that right now increasing\ninvestments in alignment of existing language models is more cost-effective than training\nlarger models—at least for our customers’ natural language task distribution.\n2. We’ve seen some evidence that InstructGPT generalizes ‘following instructions’ to\nsettings that we don’t supervise it in, for example on non-English language tasks and\ncode-related tasks. This is an important property because it’s prohibitively expensive to have\nhumans supervise models on every task they perform. More research is needed to study how"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 6,
+            "page_label": "7",
+            "start_index": 0,
+            "chunk_id": 30,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 7
+          },
+          "text": "To train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 0,
+            "page_label": "1",
+            "start_index": 838,
+            "chunk_id": 2,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 1
+          },
+          "text": "submitted through the OpenAI API, we collect a dataset of labeler demonstrations\nof the desired model behavior, which we use to ﬁne-tune GPT-3 using supervised\nlearning. We then collect a dataset of rankings of model outputs, which we use to\nfurther ﬁne-tune this supervised model using reinforcement learning from human\nfeedback. We call the resulting models InstructGPT. In human evaluations on\nour prompt distribution, outputs from the 1.3B parameter InstructGPT model are\npreferred to outputs from the 175B GPT-3, despite having 100x fewer parameters.\nMoreover, InstructGPT models show improvements in truthfulness and reductions\nin toxic output generation while having minimal performance regressions on public\nNLP datasets. Even though InstructGPT still makes simple mistakes, our results\nshow that ﬁne-tuning with human feedback is a promising direction for aligning\nlanguage models with human intent.\n1 Introduction"
+        }
+      ],
+      "original": "В фрагменте 82, стр. 17, не указано конкретное electricity bill в US долларах для training InstructGPT.",
+      "strict": "Not enough information in the document."
+    },
+    {
+      "question": "What was the MAC address of the computer used to train InstructGPT?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 5,
+            "page_label": "6",
+            "start_index": 2332,
+            "chunk_id": 28,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 6
+          },
+          "text": "Our prompt dataset consists primarily of text prompts submitted to the OpenAI API, speciﬁcally\nthose using an earlier version of the InstructGPT models (trained via supervised learning on a subset\nof our demonstration data) on the Playground interface. 4 Customers using the Playground were\ninformed that their data could be used to train further models via a recurring notiﬁcation any time\nInstructGPT models were used. In this paper we do not use data from customers using the API in\nproduction. We heuristically deduplicate prompts by checking for prompts that share a long common\npreﬁx, and we limit the number of prompts to 200 per user ID. We also create our train, validation,\nand test splits based on user ID, so that the validation and test sets contain no data from users whose\ndata is in the training set. To avoid the models learning potentially sensitive customer details, we\nﬁlter all prompts in the training split for personally identiﬁable information (PII)."
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 25,
+            "page_label": "26",
+            "start_index": 1646,
+            "chunk_id": 131,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 26
+          },
+          "text": "A.2 API user prompts\nFor API prompts, we use prompts submitted by users to the aforementioned earlier version of the\nInstructGPT model on the OpenAI API Playground. Throughout the paper, we only use data from\nthe Playground, rather than customers using our model in production, as it was easier to get informed\nconsent: every time a user switched to an InstructGPT model, an alert message would pop up stating\nthat prompts submitted to these models could be used to train future versions of our models. We\nalso communicated this in a message on the developer Slack channel upon launching the beta of the\nInstructGPT models. We ﬁlter out prompts from the training split containing personally identiﬁable\ninformation (PII).\nTo ensure a diversity of use cases, we heuristically deduplicate prompts by checking for prompts that\nshare a long common preﬁx, and limited the number of prompts to roughly 200 per organization."
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 1,
+            "page_label": "2",
+            "start_index": 3102,
+            "chunk_id": 8,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 2
+          },
+          "text": "further in Section 5.2. We call the resulting models InstructGPT.\nWe mainly evaluate our models by having our labelers rate the quality of model outputs on our test\nset, consisting of prompts from held-out customers (who are not represented in the training data).\nWe also conduct automatic evaluations on a range of public NLP datasets. We train three model\n3Speciﬁcally, we train on prompts submitted to earlier versions of the InstructGPT models on the OpenAI\nAPI Playground, which were trained only using demonstration data. We ﬁlter out prompts containing PII.\n2"
+        }
+      ],
+      "original": "Нет информации о MAC-адресе компьютера, использованного для обучения InstructGPT.",
+      "strict": "Not enough information in the document."
+    }
+  ],
+  "dialogs": [
+    {
+      "session": "training",
+      "question": "What is InstructGPT?",
+      "query": "What is InstructGPT?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 1,
+            "page_label": "2",
+            "start_index": 3102,
+            "chunk_id": 8,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 2
+          },
+          "text": "further in Section 5.2. We call the resulting models InstructGPT.\nWe mainly evaluate our models by having our labelers rate the quality of model outputs on our test\nset, consisting of prompts from held-out customers (who are not represented in the training data).\nWe also conduct automatic evaluations on a range of public NLP datasets. We train three model\n3Speciﬁcally, we train on prompts submitted to earlier versions of the InstructGPT models on the OpenAI\nAPI Playground, which were trained only using demonstration data. We ﬁlter out prompts containing PII.\n2"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 0,
+            "page_label": "1",
+            "start_index": 838,
+            "chunk_id": 2,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 1
+          },
+          "text": "submitted through the OpenAI API, we collect a dataset of labeler demonstrations\nof the desired model behavior, which we use to ﬁne-tune GPT-3 using supervised\nlearning. We then collect a dataset of rankings of model outputs, which we use to\nfurther ﬁne-tune this supervised model using reinforcement learning from human\nfeedback. We call the resulting models InstructGPT. In human evaluations on\nour prompt distribution, outputs from the 1.3B parameter InstructGPT model are\npreferred to outputs from the 175B GPT-3, despite having 100x fewer parameters.\nMoreover, InstructGPT models show improvements in truthfulness and reductions\nin toxic output generation while having minimal performance regressions on public\nNLP datasets. Even though InstructGPT still makes simple mistakes, our results\nshow that ﬁne-tuning with human feedback is a promising direction for aligning\nlanguage models with human intent.\n1 Introduction"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 6,
+            "page_label": "7",
+            "start_index": 0,
+            "chunk_id": 30,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 7
+          },
+          "text": "To train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with"
+        }
+      ],
+      "answer": "Not enough information in the document."
+    },
+    {
+      "session": "training",
+      "question": "How was it trained?",
+      "query": "How was InstructGPT trained on a massive dataset of text from the internet and books?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 6,
+            "page_label": "7",
+            "start_index": 0,
+            "chunk_id": 30,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 7
+          },
+          "text": "To train the very ﬁrst InstructGPT models, we asked labelers to write prompts themselves. This is\nbecause we needed an initial source of instruction-like prompts to bootstrap the process, and these\nkinds of prompts weren’t often submitted to the regular GPT-3 models on the API. We asked labelers\nto write three kinds of prompts:\n• Plain: We simply ask the labelers to come up with an arbitrary task, while ensuring the\ntasks had sufﬁcient diversity.\n• Few-shot: We ask the labelers to come up with an instruction, and multiple query/response\npairs for that instruction.\n• User-based: We had a number of use-cases stated in waitlist applications to the OpenAI\nAPI. We asked labelers to come up with prompts corresponding to these use cases.\nFrom these prompts, we produce three different datasets used in our ﬁne-tuning procedure: (1) our\nSFT dataset, with labeler demonstrations used to train our SFT models, (2) our RM dataset, with"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 0,
+            "page_label": "1",
+            "start_index": 838,
+            "chunk_id": 2,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 1
+          },
+          "text": "submitted through the OpenAI API, we collect a dataset of labeler demonstrations\nof the desired model behavior, which we use to ﬁne-tune GPT-3 using supervised\nlearning. We then collect a dataset of rankings of model outputs, which we use to\nfurther ﬁne-tune this supervised model using reinforcement learning from human\nfeedback. We call the resulting models InstructGPT. In human evaluations on\nour prompt distribution, outputs from the 1.3B parameter InstructGPT model are\npreferred to outputs from the 175B GPT-3, despite having 100x fewer parameters.\nMoreover, InstructGPT models show improvements in truthfulness and reductions\nin toxic output generation while having minimal performance regressions on public\nNLP datasets. Even though InstructGPT still makes simple mistakes, our results\nshow that ﬁne-tuning with human feedback is a promising direction for aligning\nlanguage models with human intent.\n1 Introduction"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 1,
+            "page_label": "2",
+            "start_index": 3102,
+            "chunk_id": 8,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 2
+          },
+          "text": "further in Section 5.2. We call the resulting models InstructGPT.\nWe mainly evaluate our models by having our labelers rate the quality of model outputs on our test\nset, consisting of prompts from held-out customers (who are not represented in the training data).\nWe also conduct automatic evaluations on a range of public NLP datasets. We train three model\n3Speciﬁcally, we train on prompts submitted to earlier versions of the InstructGPT models on the OpenAI\nAPI Playground, which were trained only using demonstration data. We ﬁlter out prompts containing PII.\n2"
+        }
+      ],
+      "answer": "Not enough information in the document."
+    },
+    {
+      "session": "training",
+      "question": "Why was a reward model needed?",
+      "query": "Why was a large language model with a reward structure needed to train InstructGPT?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 0,
+            "page_label": "1",
+            "start_index": 838,
+            "chunk_id": 2,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 1
+          },
+          "text": "submitted through the OpenAI API, we collect a dataset of labeler demonstrations\nof the desired model behavior, which we use to ﬁne-tune GPT-3 using supervised\nlearning. We then collect a dataset of rankings of model outputs, which we use to\nfurther ﬁne-tune this supervised model using reinforcement learning from human\nfeedback. We call the resulting models InstructGPT. In human evaluations on\nour prompt distribution, outputs from the 1.3B parameter InstructGPT model are\npreferred to outputs from the 175B GPT-3, despite having 100x fewer parameters.\nMoreover, InstructGPT models show improvements in truthfulness and reductions\nin toxic output generation while having minimal performance regressions on public\nNLP datasets. Even though InstructGPT still makes simple mistakes, our results\nshow that ﬁne-tuning with human feedback is a promising direction for aligning\nlanguage models with human intent.\n1 Introduction"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 8,
+            "page_label": "9",
+            "start_index": 1504,
+            "chunk_id": 43,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 9
+          },
+          "text": "following combined objective function in RL training:\nobjective (φ) =E(x,y)∼DπRLφ\n[\nrθ(x,y )−β log\n(\nπRLφ (y|x)/πSFT(y|x))] +\nγEx∼Dpretrain\n[\nlog(πRLφ (x))] (2)\nwhere πRLφ is the learned RL policy, πSFT is the supervised trained model, and Dpretrain is the\npretraining distribution. The KL reward coefﬁcient,β, and the pretraining loss coefﬁcient,γ, control\nthe strength of the KL penalty and pretraining gradients respectively. For \"PPO\" models,γ is set to 0.\nUnless otherwise speciﬁed, in this paper InstructGPT refers to the PPO-ptx models.\nBaselines. We compare the performance of our PPO models to our SFT models and GPT-3. We also\ncompare to GPT-3 when it is provided a few-shot preﬁx to ‘prompt’ it into an instruction-following\nmode (GPT-3-prompted). This preﬁx is prepended to the user-speciﬁed instruction.6\nWe additionally compare InstructGPT to ﬁne-tuning 175B GPT-3 on the FLAN (Wei et al., 2021) and"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 14,
+            "page_label": "15",
+            "start_index": 3140,
+            "chunk_id": 72,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 15
+          },
+          "text": "leads to signiﬁcant decreases in validation reward and never fully recovers on DROP and SQuAD.\nChanging the KL model from the PPO init to GPT-3 gives similar results.\n4.3 Qualitative results\nInstructGPT models show promising generalization to instructions outside of the RLHF ﬁne-\ntuning distribution. In particular, we ﬁnd that InstructGPT shows ability to follow instructions\nin non-English languages, and perform summarization and question-answering for code. This is\n15"
+        }
+      ],
+      "answer": "Not enough information in the document."
+    },
+    {
+      "session": "evaluation",
+      "question": "How were the models evaluated?",
+      "query": "How were the models evaluated?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 55,
+            "page_label": "56",
+            "start_index": 0,
+            "chunk_id": 206,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 56
+          },
+          "text": "Table 14: Automatic evaluations\nGPT models SFT models PPO models PPO + ptx models\nTask Metric Prompt XL 6b 175b XL 6b 175b XL 6b 175b XL 6b 175b\nWinogender entropy basic 0.750 0.721 0.735 0.583 0.535 0.503 0.698 0.587 0.618 0.760 0.719 0.737\nrespectful 0.774 0.753 0.796 0.561 0.446 0.479 0.644 0.562 0.527 0.608 0.585 0.696\nbiased 0.760 0.773 0.783 0.561 0.516 0.540 0.706 0.567 0.564 0.676 0.543 0.690\nCrowS Pairs entropy basic 0.448 0.430 0.410 0.356 0.326 0.241 0.355 0.361 0.326 0.448 0.434 0.413\nrespectful 0.419 0.413 0.362 0.302 0.260 0.204 0.281 0.258 0.270 0.310 0.273 0.243\nbiased 0.420 0.419 0.353 0.305 0.252 0.187 0.287 0.288 0.223 0.314 0.254 0.205\nReal Toxicity toxicity basic 0.228 0.229 0.231 0.198 0.211 0.211 0.213 0.214 0.228 0.228 0.227 0.234\nrespectful 0.211 0.232 0.233 0.196 0.196 0.199 0.198 0.176 0.205 0.179 0.204 0.196\nbiased 0.250 0.261 0.285 0.236 0.250 0.256 0.254 0.382 0.427 0.263 0.512 0.400"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 36,
+            "page_label": "37",
+            "start_index": 3259,
+            "chunk_id": 161,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 37
+          },
+          "text": "• Not writing sexual or violent content if it’s not asked for.\n• Not giving bad real-world advice, or promoting illegal activity.\nEvaluating model outputs may involve making trade-offs between these criteria. These trade-offs will depend on the task.\nUse the following guidelines to help select between outputs when making these trade-offs:\nFor most tasks, being harmless and truthful is more important than being helpful. So in most cases, rate an output that’s\nmore truthful and harmless higher than an output that’s more helpful. However, if: (a) one output is much more helpful\nthan the other; (b) that output is only slightly less truthful / harmless; and (c) the task does not seem to be in a “high stakes\ndomain” (e.g. loan applications, therapy, medical or legal advice, etc.); then rate the more helpful output higher. When\nchoosing between outputs that are similarly helpful but are untruthful or harmful in different ways, ask: which output is more"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 19,
+            "page_label": "20",
+            "start_index": 4075,
+            "chunk_id": 102,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 20
+          },
+          "text": "and increased centralization of power because it requires the API provider to make decisions on\nwhere to draw the line on each of these questions.\nFinally, as discussed in Section 5.2, the question of who these models are aligned to is extremely\nimportant, and will signiﬁcantly affect whether the net impact of these models is positive or negative.\n20"
+        }
+      ],
+      "answer": "206. стр. 56: [Фрагмент N, стр. M]\n\nThe models were evaluated using the following metrics:\n\n* Winogender entropy (WG): 0.750, 0.721, 0.735, 0.583, 0.535, 0.503, 0.698, 0.587, 0.618, 0.760, 0.719, 0.737\n* Respectful entropy (RE): 0.774, 0.753, 0.796, 0.561, 0.446, 0.479, 0.644, 0.562, 0.527, 0.608, 0.585, 0.696\n* Biased entropy (BE): 0.760, 0.773, 0.783, 0.561, 0.516, 0.540, 0.706, 0.567, 0.564, 0.676, 0.543, 0.690\n* Crow's Pairs entropy (CP): 0.448, 0.430, 0.410, 0.356, 0.326, 0.241, 0.355, 0.361, 0.326, 0.448, 0.434, 0.413\n* Respectful Crow's Pairs entropy (RCP): 0.419, 0.413, 0.362, 0.302, 0.260, 0.204, 0.281, 0.258, 0.270, 0.310, 0.273, 0.243\n* Biased Crow's Pairs entropy (BCP): 0.420, 0.419, 0.353, 0.305, 0.252, 0.187, 0.287, 0.288, 0.223, 0.314, 0.254, 0.205\n\n161. стр. 37: [Фрагмент N, стр. M]\n\nThe guidelines for evaluating model outputs are as follows:\n\n* Not writing sexual or violent content if it's not asked for.\n* Not giving bad real-world advice, or promoting illegal activity.\n* Evaluating model outputs may involve making trade-offs between these criteria. These trade-offs"
+    },
+    {
+      "session": "evaluation",
+      "question": "Which smaller model performed well?",
+      "query": "\"Which smaller model was used for evaluation\"",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 57,
+            "page_label": "58",
+            "start_index": 2475,
+            "chunk_id": 216,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 58
+          },
+          "text": "and using larger models may change this conclusion.\nWe experimented with batch sizes of 64, 128, 256, 512, and 1024, for PPO with pretraining data mix,\non the 1.3B model. A batch size of 512 was found to be the best through human evaluations. After\nﬁxing the batch size at 512, we further experimented with minibatch sizes of 8, 16, 32, 64. We found\n58"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 55,
+            "page_label": "56",
+            "start_index": 1561,
+            "chunk_id": 208,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 56
+          },
+          "text": "few-shot 0.550 0.677 0.791 0.516 0.657 0.741 0.530 0.671 0.759 0.559 0.694 0.820\nWSC accuracy zero-shot 0.567 0.635 0.740 0.615 0.606 0.654 0.663 0.654 0.683 0.692 0.587 0.731\nfew-shot 0.587 0.654 0.798 0.615 0.625 0.779 0.625 0.596 0.654 0.644 0.673 0.788\nRTE accuracy zero-shot 0.527 0.617 0.563 0.487 0.516 0.570 0.480 0.708 0.704 0.538 0.657 0.668\nfew-shot 0.585 0.682 0.614 0.574 0.657 0.700 0.606 0.585 0.711 0.545 0.697 0.765\nSST accuracy zero-shot 0.592 0.616 0.898 0.873 0.888 0.907 0.817 0.820 0.920 0.812 0.901 0.900\nfew-shot 0.842 0.930 0.944 0.909 0.933 0.936 0.794 0.880 0.944 0.838 0.923 0.938\nQuAC f1 zero-shot 32.13 38.19 42.55 34.52 41.19 45.22 29.02 37.64 34.52 35.04 37.35 41.60\nfew-shot 36.02 41.78 45.38 35.95 43.13 48.77 31.81 40.63 36.00 39.40 42.42 46.99\nSQuADv2 f1 zero-shot 51.97 58.66 64.30 36.88 46.53 57.67 45.37 47.42 43.68 45.46 47.23 59.85\nfew-shot 58.86 62.33 69.75 46.62 53.91 65.90 48.11 52.34 51.95 58.33 63.78 69.93"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 39,
+            "page_label": "40",
+            "start_index": 1534,
+            "chunk_id": 171,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 40
+          },
+          "text": "down to 10% of the original learning rate, with no learning rate warmup. For our 1.3B and 6B\nmodels, we use an LR of 9.65e-6 and a batch size of 32. For 175B, we use a LR of 5.03e-6 and\na batch size of 8. To select learning rates, we did a geometric search over 7 LRs for 1.3B and 6B,\nand 5 LRs for 175B. We also tuned the number of epochs using geometric search. Our ﬁnal models\n40"
+        }
+      ],
+      "answer": "Not enough information in the document."
+    },
+    {
+      "session": "evaluation",
+      "question": "What did human raters prefer?",
+      "query": "\"human raters preferred model 2\"",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 39,
+            "page_label": "40",
+            "start_index": 0,
+            "chunk_id": 169,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 40
+          },
+          "text": "Table 12: Labeler demographic data\nWhat gender do you identify as?\nMale 50.0%\nFemale 44.4%\nNonbinary / other 5.6%\nWhat ethnicities do you identify as?\nWhite / Caucasian 31.6%\nSoutheast Asian 52.6%\nIndigenous / Native American / Alaskan Native 0.0%\nEast Asian 5.3%\nMiddle Eastern 0.0%\nLatinx 15.8%\nBlack / of African descent 10.5%\nWhat is your nationality?\nFilipino 22%\nBangladeshi 22%\nAmerican 17%\nAlbanian 5%\nBrazilian 5%\nCanadian 5%\nColombian 5%\nIndian 5%\nUruguayan 5%\nZimbabwean 5%\nWhat is your age?\n18-24 26.3%\n25-34 47.4%\n35-44 10.5%\n45-54 10.5%\n55-64 5.3%\n65+ 0%\nWhat is your highest attained level of education?\nLess than high school degree 0%\nHigh school degree 10.5%\nUndergraduate degree 52.6%\nMaster’s degree 36.8%\nDoctorate degree 0%\nC Additional model details\nAll model architectures use the GPT-3 architecture (Brown et al., 2020). For the reward models and\nvalue functions, the unembedding layer of the original model is replaced with a projection layer"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 57,
+            "page_label": "58",
+            "start_index": 0,
+            "chunk_id": 213,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 58
+          },
+          "text": "3.5\n4\n4.5\n5\n1.3B\n \nPretrain mix\nNo pretrain mix\n6B 175B\nLikert\n0.5e-51e-5 1.5e-52e-5 2.5e-5\n0.5\n0.6\n0.7\n0.8\n0.5e-51e-5 1.5e-52e-5 2.5e-52.50e-62.75e-63e-6 3.25e-63.50e-63.75e-6\nLearning rate\nWin rates against\n175b SFT\nFigure 38: Human evaluation metrics as a function of learning rates.\nE.9 Learning rate optimization for PPO models\nFor both 1.3B and 6B models, we scan the learning rate in log-linear space, from 2.55e-6 to 2.55e-5,\nfor both PPO with and without the pretraining data mix. All runs with learning rate greater than\n8.05e-6 diverged, for PPO models without pretraining data mix. For the 175B models, we did similar\nexperiments with two learning rates of 2.55e-6 and 3.74e-06, due to compute constraints. Figure 38\nshows the human evaluation results. PPO with pretraining data mix appears to be less sensitive to\nchange of the learning rate. Based on these results, we picked the checkpoints with the highest likert\nscores, as our ﬁnal models."
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 17,
+            "page_label": "18",
+            "start_index": 3082,
+            "chunk_id": 89,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 18
+          },
+          "text": "and has suitable accountability mechanisms in place. The goal of this paper is to demonstrate that\nthis alignment technique can align to an speciﬁc human reference group for a speciﬁc application.\nWe are not claiming that researchers, the labelers we hired, or our API customers are the right source\nof preferences. There are many stakeholders to consider—the organization training the model, the\ncustomers using the model to develop products, the end users of these products, and the broader\npopulation who may be directly or indirectly affected. It is not only a matter of making the alignment\nprocess more participatory; it is impossible that one can train a system that is aligned to everyone’s\npreferences at once, or where everyone would endorse the tradeoffs.\nOne path forward could be to train models that can be conditioned on the preferences of certain\ngroups, or that can be easily ﬁne-tuned or prompted to represent different groups. Different models"
+        }
+      ],
+      "answer": "Not enough information in the document."
+    },
+    {
+      "session": "labelers",
+      "question": "Who were the labelers?",
+      "query": "Who were the labelers?",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 20,
+            "page_label": "21",
+            "start_index": 1664,
+            "chunk_id": 105,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 21
+          },
+          "text": "Elie Georges.\nFinally, we want to thank our labelers, without whom this work would not have been possible:\nMeave Fryer, Sara Tirmizi, James Carroll, Jian Ouyang, Michelle Brothers, Conor Agnew, Joe\nKwon, John Morton, Emma Duncan, Delia Randolph, Kaylee Weeks, Alexej Savreux, Siam Ahsan,\nRashed Sorwar, Atresha Singh, Muhaiminul Rukshat, Caroline Oliveira, Juan Pablo Castaño Rendón,\nAtqiya Abida Anjum, Tinashe Mapolisa, Celeste Fejzo, Caio Oleskovicz, Salahuddin Ahmed, Elena\nGreen, Ben Harmelin, Vladan Djordjevic, Victoria Ebbets, Melissa Mejia, Emill Jayson Caypuno,\nRachelle Froyalde, Russell M. Bernandez, Jennifer Brillo, Jacob Bryan, Carla Rodriguez, Evgeniya\nRabinovich, Morris Stuttard, Rachelle Froyalde, Roxanne Addison, Sarah Nogly, Chait Singh.\nReferences\nAbramson, J., Ahuja, A., Barr, I., Brussee, A., Carnevale, F., Cassin, M., Chhaparia, R., Clark,\nS., Damoc, B., Dudzik, A., et al. (2020). Imitating interactive intelligence. arXiv preprint\narXiv:2012.05672."
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 35,
+            "page_label": "36",
+            "start_index": 1548,
+            "chunk_id": 154,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 36
+          },
+          "text": "labeler.\n4. Self-assessed ability to identify sensitive speech for different groups. We wanted to\nselect a team of labelers that had collectively were able to identify sensitive content in a\nbroad range of areas. For legal reasons, we can’t hire contractors based on demographic\ncriteria. Thus, we had labelers answer the question: “For what topics or cultural groups\nare you comfortable identifying sensitive speech?” and used this as part of our selection\nprocess.\nAfter collecting this data, we selected the labelers who did well on all of these criteria (we performed\nselections on an anonymized version of the data). Since the fourth criteria is subjective, we ultimately\nchose labelers subjectively according to these criteria, though we had soft cutoffs at 75% agreement\non sensitive speech ﬂagging and comparisons, and a 6/7 demonstration score.\nB.2 Labeling instructions\nThe instructions we provided to labelers evolved over the course of the project, as we provided"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 39,
+            "page_label": "40",
+            "start_index": 0,
+            "chunk_id": 169,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 40
+          },
+          "text": "Table 12: Labeler demographic data\nWhat gender do you identify as?\nMale 50.0%\nFemale 44.4%\nNonbinary / other 5.6%\nWhat ethnicities do you identify as?\nWhite / Caucasian 31.6%\nSoutheast Asian 52.6%\nIndigenous / Native American / Alaskan Native 0.0%\nEast Asian 5.3%\nMiddle Eastern 0.0%\nLatinx 15.8%\nBlack / of African descent 10.5%\nWhat is your nationality?\nFilipino 22%\nBangladeshi 22%\nAmerican 17%\nAlbanian 5%\nBrazilian 5%\nCanadian 5%\nColombian 5%\nIndian 5%\nUruguayan 5%\nZimbabwean 5%\nWhat is your age?\n18-24 26.3%\n25-34 47.4%\n35-44 10.5%\n45-54 10.5%\n55-64 5.3%\n65+ 0%\nWhat is your highest attained level of education?\nLess than high school degree 0%\nHigh school degree 10.5%\nUndergraduate degree 52.6%\nMaster’s degree 36.8%\nDoctorate degree 0%\nC Additional model details\nAll model architectures use the GPT-3 architecture (Brown et al., 2020). For the reward models and\nvalue functions, the unembedding layer of the original model is replaced with a projection layer"
+        }
+      ],
+      "answer": "Who were the labelers? [Фрагмент 105, стр. 21]\nReferences\nAbramson, J., Ahuja, A., Barr, I., Brussee, A., Carnevale, F., Cassin, M., Chhaparia, R., Clark, S., Damoc, B., Dudzik, A., et al. (2020). Imitating interactive intelligence. arXiv preprint arXiv:2012.05672."
+    },
+    {
+      "session": "labelers",
+      "question": "Where were they recruited from?",
+      "query": "\"Where were the labelers recruited from?\"",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 18,
+            "page_label": "19",
+            "start_index": 0,
+            "chunk_id": 91,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 19
+          },
+          "text": "5.3 Limitations\nMethodology. The behavior of our InstructGPT models is determined in part by the human feedback\nobtained from our contractors. Some of the labeling tasks rely on value judgments that may be\nimpacted by the identity of our contractors, their beliefs, cultural backgrounds, and personal history.\nWe hired about 40 contractors, guided by their performance on a screening test meant to judge how\nwell they could identify and respond to sensitive prompts, and their agreement rate with researchers\non a labeling task with detailed instructions (see Appendix B). We kept our team of contractors small\nbecause this facilitates high-bandwidth communication with a smaller set of contractors who are\ndoing the task full-time. However, this group is clearly not representative of the full spectrum of\npeople who will use and be affected by our deployed models. As a simple example, our labelers are\nprimarily English-speaking and our data consists almost entirely of English instructions."
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 35,
+            "page_label": "36",
+            "start_index": 1548,
+            "chunk_id": 154,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 36
+          },
+          "text": "labeler.\n4. Self-assessed ability to identify sensitive speech for different groups. We wanted to\nselect a team of labelers that had collectively were able to identify sensitive content in a\nbroad range of areas. For legal reasons, we can’t hire contractors based on demographic\ncriteria. Thus, we had labelers answer the question: “For what topics or cultural groups\nare you comfortable identifying sensitive speech?” and used this as part of our selection\nprocess.\nAfter collecting this data, we selected the labelers who did well on all of these criteria (we performed\nselections on an anonymized version of the data). Since the fourth criteria is subjective, we ultimately\nchose labelers subjectively according to these criteria, though we had soft cutoffs at 75% agreement\non sensitive speech ﬂagging and comparisons, and a 6/7 demonstration score.\nB.2 Labeling instructions\nThe instructions we provided to labelers evolved over the course of the project, as we provided"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 39,
+            "page_label": "40",
+            "start_index": 0,
+            "chunk_id": 169,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 40
+          },
+          "text": "Table 12: Labeler demographic data\nWhat gender do you identify as?\nMale 50.0%\nFemale 44.4%\nNonbinary / other 5.6%\nWhat ethnicities do you identify as?\nWhite / Caucasian 31.6%\nSoutheast Asian 52.6%\nIndigenous / Native American / Alaskan Native 0.0%\nEast Asian 5.3%\nMiddle Eastern 0.0%\nLatinx 15.8%\nBlack / of African descent 10.5%\nWhat is your nationality?\nFilipino 22%\nBangladeshi 22%\nAmerican 17%\nAlbanian 5%\nBrazilian 5%\nCanadian 5%\nColombian 5%\nIndian 5%\nUruguayan 5%\nZimbabwean 5%\nWhat is your age?\n18-24 26.3%\n25-34 47.4%\n35-44 10.5%\n45-54 10.5%\n55-64 5.3%\n65+ 0%\nWhat is your highest attained level of education?\nLess than high school degree 0%\nHigh school degree 10.5%\nUndergraduate degree 52.6%\nMaster’s degree 36.8%\nDoctorate degree 0%\nC Additional model details\nAll model architectures use the GPT-3 architecture (Brown et al., 2020). For the reward models and\nvalue functions, the unembedding layer of the original model is replaced with a projection layer"
+        }
+      ],
+      "answer": "Not enough information in the document."
+    },
+    {
+      "session": "labelers",
+      "question": "Why do their values matter?",
+      "query": "\"Where were they recruited from?\"",
+      "found": [
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 18,
+            "page_label": "19",
+            "start_index": 0,
+            "chunk_id": 91,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 19
+          },
+          "text": "5.3 Limitations\nMethodology. The behavior of our InstructGPT models is determined in part by the human feedback\nobtained from our contractors. Some of the labeling tasks rely on value judgments that may be\nimpacted by the identity of our contractors, their beliefs, cultural backgrounds, and personal history.\nWe hired about 40 contractors, guided by their performance on a screening test meant to judge how\nwell they could identify and respond to sensitive prompts, and their agreement rate with researchers\non a labeling task with detailed instructions (see Appendix B). We kept our team of contractors small\nbecause this facilitates high-bandwidth communication with a smaller set of contractors who are\ndoing the task full-time. However, this group is clearly not representative of the full spectrum of\npeople who will use and be affected by our deployed models. As a simple example, our labelers are\nprimarily English-speaking and our data consists almost entirely of English instructions."
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 35,
+            "page_label": "36",
+            "start_index": 0,
+            "chunk_id": 152,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 36
+          },
+          "text": "B Additional human data collection details\nB.1 Labeler selection\nOur labelers consist of contractors hired either through Upwork, or sourced from Scale AI. Unlike\nprevious work on RLHF that focused mostly on the summarization domain Ziegler et al. (2019);\nStiennon et al. (2020); Wu et al. (2021), in this work we want humans to label a broad set of natural\nlanguage prompts submitted to language models, some of which may be sensitive in nature. Thus, we\nconducted a screening process to select labelers who showed a high propensity to detect and respond\nto sensitive content.\nMore speciﬁcally, from an initial pool of labeler candidates, we selected our training labelers\naccording to the following criteria:\n1. Agreement on sensitive speech ﬂagging. We created a dataset of prompts and completions,\nwhere some of prompts or completions were sensitive (i.e. anything that could elicit strong\nnegative feelings, whether by being toxic, sexual, violent, judgemental, political, etc.). We"
+        },
+        {
+          "metadata": {
+            "producer": "pdfTeX-1.40.21",
+            "creator": "LaTeX with hyperref",
+            "creationdate": "2022-03-07T01:37:12+00:00",
+            "author": "",
+            "keywords": "",
+            "moddate": "2022-03-07T01:37:12+00:00",
+            "ptex.fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+            "subject": "",
+            "title": "",
+            "trapped": "/False",
+            "source": "/home/skyaker/code/aiservices/candidate_scoring_api/lab3_rag/data/LLM_instruct.pdf",
+            "total_pages": 68,
+            "page": 25,
+            "page_label": "26",
+            "start_index": 3227,
+            "chunk_id": 133,
+            "source_name": "LLM_instruct.pdf",
+            "page_number": 26
+          },
+          "text": "brainstorming What are 4 questions a user might have after reading the instruction manual for a\ntrash compactor?\n{user manual}\n1.\nContinued on next page\n26"
+        }
+      ],
+      "answer": "5.3 Limitations\nMethodology. The behavior of our InstructGPT models is determined in part by the human feedback [Фрагмент 91, стр. 19] obtained from our contractors. Some of the labeling tasks rely on value judgments that may be impacted by the identity of our contractors, their beliefs, cultural backgrounds, and personal history. [Фрагмент 152, стр. 36] We hired about 40 contractors, guided by their performance on a screening test meant to judge how well they could identify and respond to sensitive prompts, and their agreement rate with researchers on a labeling task with detailed instructions [Фрагмент 133, стр. 26]. We kept our team of contractors small [Фрагмент 152, стр. 36] because this facilitates high-bandwidth communication with a smaller set of contractors who are doing the task full-time. However, this group is clearly not representative of the full spectrum of people who will use and be affected by our deployed models. As a simple example, our labelers are primarily English-speaking [Фрагмент 152, стр. 36] and our data consists almost entirely of English instructions.\n\nB.1 Labeler selection\nOur labelers consist of contractors hired either through Upwork, or sourced from Scale AI. Unlike previous work on RLHF that focused mostly on the summarization domain Ziegler et al. (2019); Stiennon et al. (2020); Wu et al. (2021), in this work we want humans to label a broad set of natural language prompts submitted to language models, some of which may be sensitive in nature. Thus, we conducted a screening process to select labelers who showed a high propensity to detect and respond to sensitive content. More speciﬁcally, from an initial pool of labeler candidates, we selected our training labelers according to the following criteria: [Фрагмент 133, стр. 26]\n\n1. Agreement on sensitive speech ﬂagging. We created a dataset of prompts and completions, where some of prompts or completions were sensitive [Фрагмент 133, стр. 26] (i.e. anything that could elicit strong negative feelings, whether by being toxic, sexual, violent, judgemental, political, etc.). We"
+    }
+  ],
+  "cleared_history": []
+}

@@ -1,0 +1,652 @@
+{
+  "index": {
+    "first_five": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "full": [
+      1,
+      1,
+      1,
+      1,
+      0,
+      1
+    ]
+  },
+  "chunk_sizes": {
+    "500": [
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "1000": [
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      0
+    ],
+    "2000": [
+      1,
+      1,
+      0,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0
+    ]
+  },
+  "boundary": {
+    "0": [
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "100": [
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "200": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "search": {
+    "dense_exact": [
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "bow_exact": [
+      1,
+      1,
+      1,
+      1,
+      0
+    ],
+    "dense_paraphrase": [
+      1,
+      0,
+      0,
+      0,
+      1
+    ],
+    "bow_paraphrase": [
+      0,
+      0,
+      1,
+      0,
+      0
+    ]
+  },
+  "records": [
+    {
+      "group": "index",
+      "variant": "first_five",
+      "question": "What three stages are used to train InstructGPT?",
+      "documents_sha256": "0bc690adad45f6016019beb6fb74a8156caa06fc018dd8fa7d8221d71f9cfb83",
+      "sufficient": 0
+    },
+    {
+      "group": "index",
+      "variant": "first_five",
+      "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+      "documents_sha256": "0bc690adad45f6016019beb6fb74a8156caa06fc018dd8fa7d8221d71f9cfb83",
+      "sufficient": 0
+    },
+    {
+      "group": "index",
+      "variant": "first_five",
+      "question": "What does PPO-ptx add to PPO training?",
+      "documents_sha256": "0d7846da6aa34e9b6bdf9d231f9ac62f44a07a00e56ae683259262a8fab3a406",
+      "sufficient": 1
+    },
+    {
+      "group": "index",
+      "variant": "first_five",
+      "question": "What was the largest use-case category in the API prompt dataset?",
+      "documents_sha256": "0d7846da6aa34e9b6bdf9d231f9ac62f44a07a00e56ae683259262a8fab3a406",
+      "sufficient": 0
+    },
+    {
+      "group": "index",
+      "variant": "first_five",
+      "question": "Where were the labelers recruited from?",
+      "documents_sha256": "d49104a0a15fe164740c12b3d70bc9a9505caa87cdc70746aefbc65fa1711684",
+      "sufficient": 0
+    },
+    {
+      "group": "index",
+      "variant": "first_five",
+      "question": "Which public benchmark is used for toxic generation evaluation?",
+      "documents_sha256": "103753bdf814f8911fd6e099b504836fe5dc6fdc6a869d7b4e57113f2a628637",
+      "sufficient": 0
+    },
+    {
+      "group": "index",
+      "variant": "full",
+      "question": "What three stages are used to train InstructGPT?",
+      "documents_sha256": "ab2828917caa4d28977e3f79931b686b72dfa1e1cd26231eb8dfd15599cac248",
+      "sufficient": 1
+    },
+    {
+      "group": "index",
+      "variant": "full",
+      "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+      "documents_sha256": "9aad12572cfdefc9b747fff48d71b0ed93656abd33d81278ef07369f33bd80f7",
+      "sufficient": 1
+    },
+    {
+      "group": "index",
+      "variant": "full",
+      "question": "What does PPO-ptx add to PPO training?",
+      "documents_sha256": "2e069e94e58ae8eaac19a1d62e53c6a042f83283e243e0667b9597d96ada6934",
+      "sufficient": 1
+    },
+    {
+      "group": "index",
+      "variant": "full",
+      "question": "What was the largest use-case category in the API prompt dataset?",
+      "documents_sha256": "e01e51a9439179196a8c1c52c36f6ead5dd8b29ebecbf7c94094fb37f8529660",
+      "sufficient": 1
+    },
+    {
+      "group": "index",
+      "variant": "full",
+      "question": "Where were the labelers recruited from?",
+      "documents_sha256": "d778ca828be24c972418eeb8d80286046d7802ba0399be89681d3c05843d59c9",
+      "sufficient": 0
+    },
+    {
+      "group": "index",
+      "variant": "full",
+      "question": "Which public benchmark is used for toxic generation evaluation?",
+      "documents_sha256": "41332610e5312ed228e3a6938a14b4367a4733f4860fe3c693b70ccb5d63e339",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "What three stages are used to train InstructGPT?",
+      "documents_sha256": "14c1f7f19a72cf00db4591ec31670290f7f01c44e228d2574d2d955dddb13fde",
+      "sufficient": 0
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+      "documents_sha256": "aa146dd22ebe2640250ffc31695db84624c0f444e22becf5120d41f87dd70491",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "What does PPO-ptx add to PPO training?",
+      "documents_sha256": "3c963792dbf99fb0b74c67b2d3a43db22c33531e3ee56c56eadbe4fc9f4a0583",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "Which model size was preferred to 175B GPT-3 in human evaluations?",
+      "documents_sha256": "5411b713dafb480aade5633f5d6bc21cdfab33c2c4c2aad1beade1972583c3e8",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "What were the three desired properties of model behavior?",
+      "documents_sha256": "1714ee76237084f4b6d7d1eda6aca7feafd2b5885839dc9e73ac43bcc2d49c82",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "What was the largest use-case category in the API prompt dataset?",
+      "documents_sha256": "b078e78cf0141d25f4fac3511b325e1698eb15048d61e4225b44528da668d6e3",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "Where were the labelers recruited from?",
+      "documents_sha256": "396f034cd0254c8cef9a5cb4939a8f873c14cff6681d900ecae1537ae493ab1a",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "Which public benchmark is used for toxic generation evaluation?",
+      "documents_sha256": "5047c24077dc1b1fd319c1bc6c3d68b38a747577d2a89dd7799cd87dc50359c1",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "Why can the learned alignment reflect a limited group of values?",
+      "documents_sha256": "c54eb6ee40f4735aac774ce1d4a0d6fa8e992b114030e4ecec3adaf2d8867d81",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "500",
+      "question": "What happens to tied comparisons in the reward-model data?",
+      "documents_sha256": "30aef5b05ec4fce11377f5aa5495930d6a7f62b1802ba8968f8bbb07b31ed972",
+      "sufficient": 0
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "What three stages are used to train InstructGPT?",
+      "documents_sha256": "aa904bc5cf5912c83f6698c2e50440f1db7fad7ca1abf4102b2ed9a94227237a",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+      "documents_sha256": "5b87db245a2366cea60a0da533d66aaa1d7fd9fb8b7f07cd029f60246e471417",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "What does PPO-ptx add to PPO training?",
+      "documents_sha256": "60cc15901eb289ed96f74adffae0b052d318bcbe98d5e5620817788ef57a58b7",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "Which model size was preferred to 175B GPT-3 in human evaluations?",
+      "documents_sha256": "08324735e6612a4977c2ba393daaa794a66dd9793d793bb48bb31333a7a39ba3",
+      "sufficient": 0
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "What were the three desired properties of model behavior?",
+      "documents_sha256": "ddb10173f0f0b562392eb74f27834ab7baba28c1340250b07a6be45e6ef49818",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "What was the largest use-case category in the API prompt dataset?",
+      "documents_sha256": "4e79c6ec9e6a43fba41b282f9f048aad97900318da9f826fb88e9e16a6bb479d",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "Where were the labelers recruited from?",
+      "documents_sha256": "88cac0c30998172e277d1405eceac05e51202fadcbe80417fd8fcf764bcee66e",
+      "sufficient": 0
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "Which public benchmark is used for toxic generation evaluation?",
+      "documents_sha256": "71b424181b7e5cec7c1d380b10ac88817ce0c9672a1353d36496f62a2d97414d",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "Why can the learned alignment reflect a limited group of values?",
+      "documents_sha256": "543fabb0f02925c03b312d4220f12e943a063564886bc770b2a1a62847b563b2",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "1000",
+      "question": "What happens to tied comparisons in the reward-model data?",
+      "documents_sha256": "90a98b1b352bae60bf9e2d11903c064c2067edef237c8b426e60768b6df9fd16",
+      "sufficient": 0
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "What three stages are used to train InstructGPT?",
+      "documents_sha256": "b3a3a64c902fb0a6ded4086fdc79ed7810c813918d95f08d4aaa7feef3a7f122",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+      "documents_sha256": "eb5e70fdc9729e6c79f9280088572a6f6ee9ab4f79113090c83794cc8261bbd4",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "What does PPO-ptx add to PPO training?",
+      "documents_sha256": "78223614b964ebb724ff5db508ddebde4a461d3dcbdeda67e2e0317833a14d64",
+      "sufficient": 0
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "Which model size was preferred to 175B GPT-3 in human evaluations?",
+      "documents_sha256": "6c59db72521126ad493789c5658cd091717f89b512b5472fa5907055b7856285",
+      "sufficient": 0
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "What were the three desired properties of model behavior?",
+      "documents_sha256": "f62e82b58ca57b88f251f4dacb648cdae44b2f8b026aae38095026f5437f7285",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "What was the largest use-case category in the API prompt dataset?",
+      "documents_sha256": "2109f2c4f7825dd21fd9052c5412886dce50425d8c88acc914d8ab6399c67ea8",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "Where were the labelers recruited from?",
+      "documents_sha256": "5627b4b1dbfc034c958d26b54fb17fdd4ad53c915ba7b26c065843287a97d3ee",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "Which public benchmark is used for toxic generation evaluation?",
+      "documents_sha256": "edf3171c09465a912db4e26ca534ca146a9c750eb1920e851e9fbb696146c949",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "Why can the learned alignment reflect a limited group of values?",
+      "documents_sha256": "23bd8015dc3330f6d70a04c21b7fe33e3aa57e3f125ee478d7d041c7a32833c5",
+      "sufficient": 1
+    },
+    {
+      "group": "chunk_sizes",
+      "variant": "2000",
+      "question": "What happens to tied comparisons in the reward-model data?",
+      "documents_sha256": "6667f32e11d95a7269935e4b6073731b0a02a928bc69b1e72af34595750f760b",
+      "sufficient": 0
+    },
+    {
+      "group": "boundary",
+      "variant": "0",
+      "question": "What data are used in the reward model dataset?",
+      "documents_sha256": "412d6a41178f72378ecb700eaeac2973963cb0c4658c3d963100b672484ec675",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "0",
+      "question": "How does the bandit environment supply a reward in reinforcement learning?",
+      "documents_sha256": "961865e9bd4cdb89ebf96d1e3063eae3ca1423eecf351a34f540b27ec2992eae",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "0",
+      "question": "Why is honesty difficult to measure in generative models?",
+      "documents_sha256": "1759ae8f7022c2086b9613107fdccfc92baafd525a759cf8bdc6383cb9c002a8",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "0",
+      "question": "Who provided the initial seeds for the OpenAI API waitlist?",
+      "documents_sha256": "ac0846c7714706ade059b313134a700933d0c9853f94b0a26187e55620e57145",
+      "sufficient": 0
+    },
+    {
+      "group": "boundary",
+      "variant": "0",
+      "question": "What kinds of harm are included in the definition of harmless behavior?",
+      "documents_sha256": "41f1ae08c5d1ad9cd25662f98936338043468db930fde0f888d3e5b532301d25",
+      "sufficient": 0
+    },
+    {
+      "group": "boundary",
+      "variant": "100",
+      "question": "What data are used in the reward model dataset?",
+      "documents_sha256": "24c85d83a3401c6604eb554f9ab7b4ead10e0d9b0ab1b89fb31d07f1ca59d355",
+      "sufficient": 0
+    },
+    {
+      "group": "boundary",
+      "variant": "100",
+      "question": "How does the bandit environment supply a reward in reinforcement learning?",
+      "documents_sha256": "37349b55fe41f83fcdc7f20fb26221407fe5220f3802bd22223d89bc17b8b3b1",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "100",
+      "question": "Why is honesty difficult to measure in generative models?",
+      "documents_sha256": "1af3982d91eb394566202e34abe9dd21ac2befe7bf3d090780bc8fa98b8151fa",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "100",
+      "question": "Who provided the initial seeds for the OpenAI API waitlist?",
+      "documents_sha256": "5074152f19b29dc42daea2de5304fd3fc143dfe9090f63372eddfaffc58bfdcf",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "100",
+      "question": "What kinds of harm are included in the definition of harmless behavior?",
+      "documents_sha256": "67c86a7611973e243b0d2379effaa9625a5428ce9eeed24480b6923fc6b018df",
+      "sufficient": 0
+    },
+    {
+      "group": "boundary",
+      "variant": "200",
+      "question": "What data are used in the reward model dataset?",
+      "documents_sha256": "8c79425ac43797bdfa110c284f81f464ffbc5b412000287fdda84db0733023f3",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "200",
+      "question": "How does the bandit environment supply a reward in reinforcement learning?",
+      "documents_sha256": "e13b7a5738e865f491b8c9282eec3a5f18407c6d86d96f1819727e2b793ef4dc",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "200",
+      "question": "Why is honesty difficult to measure in generative models?",
+      "documents_sha256": "9a62df1d7b7f759f5ba32889b1a1e9f0d411c4471aeb2d62cc4c66408fdee8c8",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "200",
+      "question": "Who provided the initial seeds for the OpenAI API waitlist?",
+      "documents_sha256": "d0385b0dd8f15884e717fe11042f72feab6a83306d7fa0d3993d84471b03c324",
+      "sufficient": 1
+    },
+    {
+      "group": "boundary",
+      "variant": "200",
+      "question": "What kinds of harm are included in the definition of harmless behavior?",
+      "documents_sha256": "7d25c6115032df88ccd650a47265b88c0dd7acc00eab7896a930c43258d4565f",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "dense_exact",
+      "question": "What three stages are used to train InstructGPT?",
+      "documents_sha256": "ab2828917caa4d28977e3f79931b686b72dfa1e1cd26231eb8dfd15599cac248",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "bow_exact",
+      "question": "What three stages are used to train InstructGPT?",
+      "documents_sha256": "1850b0efb201381c17b38cedca634ff94cfd0e610ce69befe8b6b3440a7ccfd9",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "dense_exact",
+      "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+      "documents_sha256": "9aad12572cfdefc9b747fff48d71b0ed93656abd33d81278ef07369f33bd80f7",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "bow_exact",
+      "question": "Why were labelers asked to write prompts for the first InstructGPT models?",
+      "documents_sha256": "a48ee2588168a6e9a6675a2d4273f5e92afde25acba67bc9cab7450e396e7a42",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "dense_exact",
+      "question": "What does PPO-ptx add to PPO training?",
+      "documents_sha256": "2e069e94e58ae8eaac19a1d62e53c6a042f83283e243e0667b9597d96ada6934",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "bow_exact",
+      "question": "What does PPO-ptx add to PPO training?",
+      "documents_sha256": "abe5ff1436fec45dd7ffc24a932d3851fd3cc6be171e5bd893a225802f360852",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "dense_exact",
+      "question": "Which model size was preferred to 175B GPT-3 in human evaluations?",
+      "documents_sha256": "327477bc61203407e4ddcefdd93bb20e06abac83228ed467803cc53de976e450",
+      "sufficient": 0
+    },
+    {
+      "group": "search",
+      "variant": "bow_exact",
+      "question": "Which model size was preferred to 175B GPT-3 in human evaluations?",
+      "documents_sha256": "bb03602dff14ba6ed5aab0d4da16a088cc0a81f0ae3788347f4762763a9f4019",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "dense_exact",
+      "question": "What were the three desired properties of model behavior?",
+      "documents_sha256": "bed793d12d7990d8e6a859dd57bd1a32fbbbef1168a4ca68e351de3700a354c0",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "bow_exact",
+      "question": "What were the three desired properties of model behavior?",
+      "documents_sha256": "2c903df42883142206ad6eabc7bf92982914d50f02eda77042bc3bc851cb4663",
+      "sufficient": 0
+    },
+    {
+      "group": "search",
+      "variant": "dense_paraphrase",
+      "question": "How did the authors transform a base GPT model into an instruction-following system?",
+      "documents_sha256": "2c61657e9a3f489debd10ab1889ab3b50af8c73c1307335a1da6690cdce171b7",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "bow_paraphrase",
+      "question": "How did the authors transform a base GPT model into an instruction-following system?",
+      "documents_sha256": "4359a3ec224dcafc45bbf446ef3931d25d684ab421525f0d81ebcf12b448d362",
+      "sufficient": 0
+    },
+    {
+      "group": "search",
+      "variant": "dense_paraphrase",
+      "question": "Why did annotators invent requests at the beginning of the project?",
+      "documents_sha256": "b68b0fa0feb19fdb1de191263a96f145cf53161144efc5768b2faff4956dfb3f",
+      "sufficient": 0
+    },
+    {
+      "group": "search",
+      "variant": "bow_paraphrase",
+      "question": "Why did annotators invent requests at the beginning of the project?",
+      "documents_sha256": "8f68d732c0135f059fdfe8b175369bd995c06f775287d0fc6032fe4aa734d3c3",
+      "sufficient": 0
+    },
+    {
+      "group": "search",
+      "variant": "dense_paraphrase",
+      "question": "How did pretraining data reduce quality losses during reinforcement learning?",
+      "documents_sha256": "28dd3eb1ac61d133584f6b50f6cfdffa336a180e00f5f3fa81865607e993df68",
+      "sufficient": 0
+    },
+    {
+      "group": "search",
+      "variant": "bow_paraphrase",
+      "question": "How did pretraining data reduce quality losses during reinforcement learning?",
+      "documents_sha256": "295482d7bc6350917e34d458bdeb1b90c5c3cc501f22021060312c9b906fecae",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "dense_paraphrase",
+      "question": "Which smaller aligned model beat a much larger base model in preference tests?",
+      "documents_sha256": "baa7f51d1bb35c73974cf457836945b9f6cce759b1c7e3c739d7f483e9ca9ed0",
+      "sufficient": 0
+    },
+    {
+      "group": "search",
+      "variant": "bow_paraphrase",
+      "question": "Which smaller aligned model beat a much larger base model in preference tests?",
+      "documents_sha256": "b3445a90faadace09f3f2fd02c36774becc5f0c51e7cbf74ddce6435ad0fef94",
+      "sufficient": 0
+    },
+    {
+      "group": "search",
+      "variant": "dense_paraphrase",
+      "question": "Which three alignment qualities were sought by the researchers?",
+      "documents_sha256": "649653c7545b96e232b2d430c5a669327d736252b375f86dd6bae9eae1a62966",
+      "sufficient": 1
+    },
+    {
+      "group": "search",
+      "variant": "bow_paraphrase",
+      "question": "Which three alignment qualities were sought by the researchers?",
+      "documents_sha256": "72954386867fc6d76323f9fff7c94ab6665c75eb92fa8513967ebc79dd8dbefa",
+      "sufficient": 0
+    }
+  ]
+}

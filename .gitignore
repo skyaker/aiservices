@@ -5,6 +5,13 @@ tests/
 *.py[cod]
 *.db
 output/
+!lab3_rag/output/
+!lab3_rag/output/pdf/
+lab3_rag/output/pdf/*
+!lab3_rag/output/pdf/lab3_report.pdf
 report/
+!lab3_rag/report/
+!lab3_rag/report/**
 report_lab2/
 tmp/
+*.zip

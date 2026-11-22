@@ -1,9 +1,9 @@
 from schemas import CandidateRequest, PredictionResponse
 
 
-# ------------------------------------------------------------
-# БИЗНЕС-ЛОГИКА И ПОСТПРОЦЕССИНГ
-# ------------------------------------------------------------
+
+
+
 
 def get_match_level(score: float) -> str:
     if score >= 75:
